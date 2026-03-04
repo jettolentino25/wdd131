@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    background-color: #f4f4f4; 
+    color: #333;
+
+   
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #004a7c; /* Your choice! */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center; /* Center the links */
+    gap: 2rem;               /* Space between links */
+    list-style: none;
+    padding: 1rem 0;
+}
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
