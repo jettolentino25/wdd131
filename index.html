@@ -4,10 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Tolentino</title>
+
+    <title>WDD 131 – Dynamic Web Fundamentals – Aaron J Evan Tolentino</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals | Aaron J Evan Tolentino | Musician, Banker, and Volleyball Enthusiast">
+
+    <meta name="author" content="Aaron J Evan Tolentino">
 </head>
 
 <body>
+
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+
+        <nav>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite
+                Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Aaron J Evan Tolentino</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile.webp" alt="Aaron Tolentino profile photo" width="200">
+
+            <p>
+                I am Aaron J Evan 'Jet' Tolentino. I am a professional musician of twenty years, specializing in piano
+                and sacred music. Currently, I serve as a Transactions Specialist within the Auto Finance division at
+                JPMorgan Chase in Manila, managing high-value financial operations.
+
+                Outside of my professional commitments, I am an avid volleyball player and a supporter of both local and
+                international live performances. I look forward to our collaboration and am committed to our collective
+                growth and success. I truly believe that with dedication and faith, we can overcome any challenge
+                together.
+            </p>
+
+
+        </section>
+
+        <section class="card">
+            <h2>Career and Interests</h2>
+            <img src="images/manila.jpg" alt="Philipines" width="200">
+
+            <p>
+                The Philippines is a vibrant, diverse archipelago known for its deep-rooted hospitality, resilient
+                spirit, and endless culinary discovery. Often called the “Pearl of the Orient Seas,” it is a treasure
+                trove of intense flavors, bustling street-side markets, and a unique fusion of indigenous, Asian, and
+                colonial traditions. For a food explorer, it is an immersive experience where every province tells a
+                distinct story, offering a harmonious blend of bold, savory, sour, and sweet notes that reflect the
+                richness of its heritage and the warmth of its people.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; <span id="currentyear"></span> Aaron J Evan Tolentino | Philippines
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    </script>
 
 </body>
 
