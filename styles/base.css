@@ -156,14 +156,14 @@ footer {
     .About-Me img {
         width: 100%;
         max-width: 300px;
-        float: none;
+        float: left;
         margin: 0 auto 15px auto;
         display: block;
     }
 
     .city-layout {
         grid-template-columns: 1fr;
-        justify-items: center;
+        justify-items: left;
         text-align: center;
     }
 
