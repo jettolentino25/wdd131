@@ -102,19 +102,20 @@ h1 {
 }
 
 .card.career {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 200px 1fr;
     gap: 20px;
+    align-items: start;
 }
 
 .card.career img {
     width: 200px;
-    margin: 0;
-    float: left;
+    border-radius: 6px;
+    box-shadow: 0 0 15px var(--border-color);
 }
 
 .card.career p {
-    flex: 1;
+    margin: 0;
 }
 
 footer {
@@ -130,15 +131,15 @@ footer {
 
 @media (max-width: 768px) {
     .card.career {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
     }
 
     .card.career img {
         width: 100%;
         max-width: 300px;
         margin-bottom: 15px;
-        float: none;
     }
 
     nav {
