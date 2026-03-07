@@ -1,42 +1,40 @@
-/* General Resets */
+/* --- 🥞 The Pancake Stack (Body) --- */
+/* This ensures the header/nav/footer take only needed space, 
+   while 'main' fills the rest of the screen. */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-
-    /* 🥞 Pancake Stack Layout (from your notes!) */
-    /* This ensures Header, Nav, and Footer take only the space they need, 
-       while the Main content fills the rest of the screen. */
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     min-height: 100vh;
 }
 
-/* 🏗️ Header */
+/* --- 🏗️ Dark Header --- */
 header {
-    background: #1a1a1a;
-    /* Darker grey to match the image top */
+    background-color: #1a1a1a;
     color: white;
-    padding: 2rem 1rem;
-    /* Generous padding for the title */
+    padding: 2rem 1.5rem;
+    /* Generous height like the photo */
 }
 
 header h1 {
     margin: 0;
     font-size: 1.5rem;
+    font-weight: normal;
 }
 
-/* 🧭 Flexbox Navigation */
+/* --- 🧭 Black Flexbox Nav --- */
 nav {
-    background: black;
+    background-color: #000000;
 }
 
 nav ul {
     display: flex;
-    /* 📏 justify-content: space-around spreads items evenly */
     justify-content: space-around;
+    /* Spreads the 4 links evenly */
     list-style: none;
     margin: 0;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
 }
 
 nav a {
@@ -45,47 +43,45 @@ nav a {
     font-weight: bold;
 }
 
-/* 🧩 Main Content Grid (Sidebar Says Pattern) */
+/* --- 🧩 Sidebar Says Pattern (Main) --- */
 main {
     display: grid;
-    /* 📐 3fr for the main area and 1fr for the sidebar */
-    grid-template-columns: 3fr 1fr;
+    /* Main gets flexible space (1fr), Aside gets a range (minmax) 
+       to match the visual ratio in your photo. */
+    grid-template-columns: 1fr minmax(200px, 25%);
 }
 
-/* 📝 Main Section */
+/* 📝 Grey Main Content Area */
 section {
-    background: #bdbdbd;
-    /* The grey background from the photo */
+    background-color: #bdbdbd;
+    /* Matches the grey in the photo */
     padding: 2rem;
-    min-height: 400px;
-    /* Ensures the area is visible */
 }
 
 section h2 {
     margin: 0;
-    color: #333;
+    font-weight: normal;
 }
 
-/* 💡 Aside Content */
+/* 💡 White Aside Sidebar */
 aside {
-    background: white;
-    /* White sidebar as seen in the photo */
+    background-color: #ffffff;
+    /* Matches the white sidebar */
     padding: 2rem;
 }
 
 aside h2 {
     margin: 0;
-    color: #333;
+    font-weight: normal;
 }
 
-/* 🦶 Footer */
+/* --- 🦶 Deep Footer --- */
 footer {
-    background: #333;
-    /* Dark grey footer */
+    background-color: #333333;
     color: white;
     text-align: center;
-    padding: 3rem 1rem;
-    /* Deep padding to match the visual height */
+    padding: 4rem 1rem;
+    /* Very deep padding to match the photo's height */
 }
 
 footer p {
