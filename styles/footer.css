@@ -10,15 +10,12 @@ header,
 footer {
     max-width: 1000px;
     margin: 0 auto;
-
-
+    padding: 1rem;
 }
-
-
-
 
 footer {
     text-align: center;
     background-color: var(--primary-color);
+    color: var(--white-color);
     border-radius: 6px;
 }
