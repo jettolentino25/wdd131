@@ -1,7 +1,6 @@
 :root {
     --body-font: 'Roboto', sans-serif;
     --primary-color: #2b3a67;
-    /* Pick one color; previously you had rgb(60,0,255) */
     --text-color: #333;
     --border-color: #d9d9d9;
     --white-color: #ffffff;
