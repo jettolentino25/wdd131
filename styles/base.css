@@ -109,12 +109,22 @@ h1 {
     margin: 0 0 15px 15px;
 }
 
+/* Specific styling for the Philippines section header to match classmate's work */
+.Philippines h3 {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
 .city-laysout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    /* Larger text area like the example */
     gap: 20px;
     align-items: start;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .city-laysout figure {
@@ -125,6 +135,8 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Added shadow for depth */
 }
 
 .city-laysout figcaption {
