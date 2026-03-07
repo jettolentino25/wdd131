@@ -1,35 +1,94 @@
+/* General Resets */
 body {
-    font-family: 'Arial', sans-serif; 
     margin: 0;
-    background-color: #f4f4f4; 
-    color: #333;
+    font-family: Arial, sans-serif;
 
-   
+    /* 🥞 Pancake Stack Layout (from your notes!) */
+    /* This ensures Header, Nav, and Footer take only the space they need, 
+       while the Main content fills the rest of the screen. */
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
     min-height: 100vh;
 }
 
+/* 🏗️ Header */
 header {
-    background-color: #004a7c; /* Your choice! */
+    background: #1a1a1a;
+    /* Darker grey to match the image top */
     color: white;
-    padding: 1rem;
-    text-align: center;
+    padding: 2rem 1rem;
+    /* Generous padding for the title */
 }
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* 🧭 Flexbox Navigation */
 nav {
-    display: flex;
-    justify-content: center; /* Center the links */
-    gap: 2rem;               /* Space between links */
-    list-style: none;
-    padding: 1rem 0;
+    background: black;
 }
+
+nav ul {
+    display: flex;
+    /* 📏 justify-content: space-around spreads items evenly */
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 1.5rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 🧩 Main Content Grid (Sidebar Says Pattern) */
 main {
+    display: grid;
+    /* 📐 3fr for the main area and 1fr for the sidebar */
+    grid-template-columns: 3fr 1fr;
+}
+
+/* 📝 Main Section */
+section {
+    background: #bdbdbd;
+    /* The grey background from the photo */
+    padding: 2rem;
+    min-height: 400px;
+    /* Ensures the area is visible */
+}
+
+section h2 {
+    margin: 0;
+    color: #333;
+}
+
+/* 💡 Aside Content */
+aside {
+    background: white;
+    /* White sidebar as seen in the photo */
     padding: 2rem;
 }
 
+aside h2 {
+    margin: 0;
+    color: #333;
+}
+
+/* 🦶 Footer */
 footer {
-    background-color: #222;
+    background: #333;
+    /* Dark grey footer */
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 3rem 1rem;
+    /* Deep padding to match the visual height */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
 }
