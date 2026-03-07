@@ -105,6 +105,8 @@ h1 {
 
 .city-layout figure {
     max-width: 200px;
+    float: left;
+    margin-right: 15px;
 }
 
 .city-layout img {
@@ -114,6 +116,7 @@ h1 {
 
 .city-layout p {
     margin: 0;
+    overflow: hidden;
 }
 
 .Web-Resources h2 {
@@ -156,15 +159,20 @@ footer {
     .About-Me img {
         width: 100%;
         max-width: 300px;
-        float: left;
+        float: right;
         margin: 0 auto 15px auto;
         display: block;
     }
 
     .city-layout {
         grid-template-columns: 1fr;
-        justify-items: left;
+        justify-items: center;
         text-align: center;
+    }
+
+    .city-layout figure {
+        float: none;
+        margin: 0 auto 15px auto;
     }
 
     nav {
