@@ -1,0 +1,20 @@
+// Footer Year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Last Modified
+document.getElementById("lastModified").textContent =
+    "Last Modification: " + document.lastModified;
+
+// Hamburger Menu
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+
+    if (navMenu.classList.contains("open")) {
+        menuBtn.textContent = "✖";
+    } else {
+        menuBtn.textContent = "☰";
+    }
+});
