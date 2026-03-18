@@ -9,19 +9,20 @@ header {
     background-color: #a0a083;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 }
 
 header h2 {
     font-family: 'Playfair Display', serif;
     margin: 0;
+    font-size: 2rem;
 }
 
 #menuBtn {
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
     margin-top: 0.5rem;
 }
@@ -39,19 +40,20 @@ nav ul {
     flex-direction: column;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1rem 0 0 0;
 }
 
 nav li {
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
 }
 
 nav a {
     text-decoration: none;
     color: white;
-    padding: 0.5rem;
+    padding: 0.75rem;
     display: block;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -62,16 +64,17 @@ nav a:hover {
 main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 h1 {
     grid-column: 1 / -1;
     text-align: center;
     font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
 }
 
 figure {
@@ -79,11 +82,12 @@ figure {
     padding: 0.5rem;
     border-radius: 8px;
     text-align: center;
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 figure:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
 }
 
 figure img {
@@ -93,7 +97,7 @@ figure img {
 }
 
 figcaption {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-weight: bold;
 }
 
@@ -101,6 +105,6 @@ footer {
     background-color: #a0a083;
     color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1.5rem;
+    margin-top: 3rem;
 }
