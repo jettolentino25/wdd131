@@ -44,8 +44,20 @@
         </section>
 
         <section class="info-section weather-section">
-            <h2 class="section-title">Weather</h2>
-            <img src="images/sun.svg" alt="Cloudy with sun icon" class="weather-icon" width="50" height="50">
+            <h2 class="section-title">Weather ⛅</h2>
+            <svg class="weather-icon" width="50" height="50" viewBox="0 0 64 64" aria-label="Sunny weather icon">
+                <circle cx="32" cy="32" r="12" fill="gold"></circle>
+                <g stroke="orange" stroke-width="3">
+                    <line x1="32" y1="4" x2="32" y2="16"></line>
+                    <line x1="32" y1="48" x2="32" y2="60"></line>
+                    <line x1="4" y1="32" x2="16" y2="32"></line>
+                    <line x1="48" y1="32" x2="60" y2="32"></line>
+                    <line x1="12" y1="12" x2="20" y2="20"></line>
+                    <line x1="44" y1="44" x2="52" y2="52"></line>
+                    <line x1="12" y1="52" x2="20" y2="44"></line>
+                    <line x1="44" y1="20" x2="52" y2="12"></line>
+                </g>
+            </svg>
             <div class="grid-body">
                 <strong>Temperature:</strong> <span>31°C</span>
                 <strong>Conditions:</strong> <span>Sunny</span>
