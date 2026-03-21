@@ -1,15 +1,17 @@
 :root {
-    --primary-color: #003f87;
-    --accent-color: #da2020;
+    --primary-color: #0038A8;
+    --accent-color: #CE1126;
+    --sun-color: #FCD116;
+    --sun-ray: #FCD116;
+
     --light-bg: #f5f5f5;
-    --text-dark: #333333;
+    --text-dark: #222222;
     --text-light: #444444;
     --white: #ffffff;
     --black: #000000;
-    --bg-overlay: rgba(255, 255, 255, 0.85);
-    --shadow-dark: rgba(0, 0, 0, 0.3);
-    --sun-color: #ffd700;
-    --sun-ray: #ffa500;
+
+    --bg-overlay: rgba(255, 255, 255, 0.9);
+    --shadow-dark: rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -29,7 +31,7 @@ body {
     color: var(--white);
     text-align: center;
     padding: 15px 0;
-    border-bottom: 8px solid var(--accent-color);
+    border-bottom: 8px solid var(--sun-color);
 }
 
 .hero-image img {
@@ -47,6 +49,8 @@ body {
     font-size: 2rem;
     margin-bottom: 25px;
     font-weight: 700;
+    border-left: 6px solid var(--accent-color);
+    padding-left: 10px;
 }
 
 .grid-body {
@@ -120,6 +124,7 @@ body {
         padding: 10px 30px;
         width: 80%;
         margin-bottom: 0;
+        border-left: none;
     }
 
     .data-section {
