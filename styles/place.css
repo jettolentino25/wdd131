@@ -8,6 +8,8 @@
     --black: #000000;
     --bg-overlay: rgba(255, 255, 255, 0.85);
     --shadow-dark: rgba(0, 0, 0, 0.3);
+    --sun-color: #ffd700;
+    --sun-ray: #ffa500;
 }
 
 * {
