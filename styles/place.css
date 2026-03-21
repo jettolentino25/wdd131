@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background-color: var(--light-bg);
     color: var(--text-dark);
 }
@@ -78,13 +78,13 @@ body {
 @media (min-width: 1024px) {
     body {
         background-color: var(--primary-color);
-        height: 100vh;
-        overflow: hidden;
+        min-height: 100vh;
+        overflow-x: hidden;
     }
 
     .content-wrapper {
         position: relative;
-        height: calc(100vh - 135px);
+        min-height: calc(100vh - 135px);
     }
 
     .weather-icon {
@@ -103,8 +103,7 @@ body {
 
     .info-section {
         position: absolute;
-        background: var(--bg-overlay);
-        backdrop-filter: blur(8px);
+        background-color: var(--bg-overlay);
         padding: 50px 20px 20px;
         text-align: left;
         box-shadow: 0 10px 30px var(--shadow-dark);
@@ -114,7 +113,7 @@ body {
         position: absolute;
         top: -15px;
         left: -15px;
-        background: var(--primary-color);
+        background-color: var(--primary-color);
         color: var(--white);
         padding: 10px 30px;
         width: 80%;
