@@ -1,8 +1,8 @@
-// Get the current year and display it in the copyright
+// This is my current year and display it in the copyright
 const currentYear = new Date().getFullYear();
 document.getElementById("currentyear").innerHTML = currentYear;
 
-// Get the last modified date of the document and display it
+// I took the  last modified date of the document and display it
 document.getElementById("lastModified").innerHTML = "Last modification: " + document.lastModified;
 
 // Static weather values (metric: °C and km/h)
