@@ -80,12 +80,12 @@ function displayTemples(list) {
         const card = document.createElement("article");
 
         card.innerHTML = `
-      <h3>${temple.templeName}</h3>
-      <p>${temple.location}</p>
-      <p>Dedicated: ${temple.dedicated}</p>
-      <p>Area: ${temple.area} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-    `;
+        <h3>${temple.templeName}</h3>
+        <p>${temple.location}</p>
+        <p>Dedicated: ${temple.dedicated}</p>
+        <p>Area: ${temple.area} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+        `;
 
         templeContainer.appendChild(card);
     });

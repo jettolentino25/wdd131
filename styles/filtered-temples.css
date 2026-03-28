@@ -1,11 +1,9 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Font */
 body {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
@@ -13,18 +11,16 @@ body {
     color: #222;
 }
 
-/* Headings Font */
 h1,
 h2,
 h3 {
     font-family: "Merriweather", serif;
 }
 
-/* Header */
 header {
     text-align: center;
     padding: 1rem;
-    background: #a39b6f;
+    background: #6b704c;
     color: #fff;
 }
 
@@ -36,7 +32,6 @@ header {
     cursor: pointer;
 }
 
-/* Navigation */
 .navigation {
     display: none;
 }
@@ -60,13 +55,11 @@ nav a {
     padding: 0.75rem;
 }
 
-/* Hover */
 nav a:hover {
-    background: #8c845a;
+    background: #505536;
     border-radius: 4px;
 }
 
-/* Cards */
 #temple-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -88,32 +81,9 @@ article img {
     border-radius: 6px;
 }
 
-/* Footer */
 footer {
-    background: #a39b6f;
+    background: #6b704c;
     color: white;
     text-align: center;
     padding: 1rem;
-}
-
-/* Larger Screens */
-@media (min-width: 768px) {
-
-    #menu-button {
-        display: none;
-    }
-
-    .navigation {
-        display: flex !important;
-        justify-content: center;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 2rem;
-    }
-
-    #temple-cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
