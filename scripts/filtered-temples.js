@@ -1,3 +1,4 @@
+
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -48,6 +49,7 @@ const temples = [
         area: 116642,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+
     {
         templeName: "Cebu City Philippines Temple",
         location: "Cebu, Philippines",
@@ -71,60 +73,72 @@ const temples = [
     }
 ];
 
+// Select container
 const templeContainer = document.querySelector("#temple-cards");
-const menuBtn = document.getElementById("menu-button");
-const nav = document.querySelector(".navigation");
 
-/* Display temples */
+// Display temples
 function displayTemples(list) {
     templeContainer.innerHTML = "";
 
     list.forEach(temple => {
         const card = document.createElement("article");
 
-        card.innerHTML = `
-            <h3>${temple.templeName}</h3>
-            <p>${temple.location}</p>
-            <p>Dedicated: ${temple.dedicated}</p>
-            <p>Area: ${temple.area} sq ft</p>
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-        `;
+        const name = document.createElement("h3");
+        name.textContent = temple.templeName;
 
+        const location = document.createElement("p");
+        location.textContent = temple.location;
+
+        const dedicated = document.createElement("p");
+        dedicated.textContent = "Dedicated: " + temple.dedicated;
+
+        const area = document.createElement("p");
+        area.textContent = "Area: " + temple.area + " sq ft";
+
+        const img = document.createElement("img");
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
+        img.loading = "lazy";
+
+        card.append(name, location, dedicated, area, img);
         templeContainer.appendChild(card);
     });
 }
 
-/* Filter function */
+// Filter function (FIXED YEAR PARSING)
 function filterTemples(filter) {
-    const filtered = temples.filter(t => {
-        const year = parseInt(t.dedicated);
+    const filtered = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
 
         if (filter === "Old") return year < 1900;
         if (filter === "New") return year > 2000;
-        if (filter === "Large") return t.area > 90000;
-        if (filter === "Small") return t.area < 10000;
+        if (filter === "Large") return temple.area > 90000;
+        if (filter === "Small") return temple.area < 10000;
         return true; // Home
     });
 
     displayTemples(filtered);
 }
 
-/* Navigation click events */
+// Navigation events
 document.querySelectorAll(".nav-item").forEach(item => {
-    item.addEventListener("click", e => {
+    item.addEventListener("click", function (e) {
         e.preventDefault();
-        filterTemples(item.textContent);
+        filterTemples(this.textContent);
     });
 });
 
-/* Footer info */
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+// Footer info
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
 
-/* Mobile menu toggle */
+// Mobile menu toggle
+const menuBtn = document.querySelector("#menu-button");
+const nav = document.querySelector(".navigation");
+
 menuBtn.addEventListener("click", () => {
     nav.classList.toggle("open");
 });
 
-/* Initial load */
+// Initial load
 displayTemples(temples);
