@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals - Shadrack Onyango. Page is about Responsiveness and DOM">
+    <meta name="author" content="Shadrack Onyango">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h2>Temple Album</h2>
+        <button id="menu-button" aria-label="Open menu">☰</button>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="#" class="nav-item">Home</a></li>
+                <li><a href="#" class="nav-item">Old</a></li>
+                <li><a href="#" class="nav-item">New</a></li>
+                <li><a href="#" class="nav-item">Large</a></li>
+                <li><a href="#" class="nav-item">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Gallery</h1>
+        <section id="temple-cards"></section>
+    </main>
+
+    <footer>
+        <p><strong>©️</strong><span id="year"></span> Aaron J Evan M. Tolentino, Kenya</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
