@@ -1,143 +1,118 @@
-/* Global Resets */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic Page Styling */
+/* Body Font */
 body {
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
     background-color: #f5f5f5;
     color: #222;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Header Styling */
+/* Headings Font */
+h1,
+h2,
+h3 {
+    font-family: "Merriweather", serif;
+}
+
+/* Header (Dark Olive Green) */
 header {
     text-align: center;
-    padding: 1rem 2rem;
-    background: #5a4b2c;
-    color: #ffffff;
+    padding: 1rem;
+    background: #556b2f;
+    color: #fff;
 }
 
-/* Hamburger button styling */
 #menu-button {
     font-size: 2rem;
-    color: #fff;
-    background: transparent;
+    background: none;
     border: none;
+    color: white;
     cursor: pointer;
-    padding: 0.5rem;
 }
 
-/* Navigation layout */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
-    flex-wrap: wrap;
-}
-
-/* Navigation Links */
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    display: block;
-    padding: 0.75rem 1.25rem;
-    min-height: 44px;
-}
-
-/* Hover effect for navigation */
-nav ul li a:hover,
-nav ul li a:focus {
-    background-color: #1f8f15;
-    color: #fff;
-    border-radius: 4px;
-}
-
-/* Hiding nav menu in mobile view */
+/* Navigation */
 .navigation {
     display: none;
 }
 
-/* Menu opening using JS */
 .navigation.open {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
 }
 
-.navigation ul {
-    flex-direction: column;
-    gap: 1rem;
+nav ul {
+    list-style: none;
+    padding: 1rem;
 }
 
-/* Grid layout for temple cards */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 0.75rem;
+}
+
+/* Hover (Darker Olive) */
+nav a:hover {
+    background: #3e4f1c;
+    border-radius: 4px;
+}
+
+/* Cards */
 #temple-cards {
     display: grid;
     grid-template-columns: 1fr;
-    /* one column on mobile */
     gap: 1rem;
     padding: 1rem;
 }
 
-#temple-cards img {
+article {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+article img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 6px;
 }
 
-/* Centering figure content */
-figure {
-    text-align: center;
-}
-
-figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-}
-
-/* Footer Styling */
+/* Footer (Dark Olive Green) */
 footer {
-    background: #1f3f6b;
-    color: #fff;
-    padding: 1rem 2rem;
+    background: #556b2f;
+    color: white;
     text-align: center;
+    padding: 1rem;
 }
 
-/* Media query for larger screens */
+/* Larger Screens */
 @media (min-width: 768px) {
 
-    /* Hides hamburger button on larger screens */
     #menu-button {
         display: none;
     }
 
-    /* Displays navigation horizontally */
-    .navigation,
-    .navigation.open {
+    .navigation {
         display: flex !important;
-        flex-direction: row !important;
         justify-content: center;
-        gap: 2rem;
     }
 
-    .navigation ul {
+    nav ul {
         display: flex;
-        flex-direction: row !important;
-        justify-content: center;
         gap: 2rem;
     }
 
-    /* Displays temple cards in multiple columns */
     #temple-cards {
         grid-template-columns: repeat(3, 1fr);
     }
