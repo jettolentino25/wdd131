@@ -20,11 +20,11 @@ h3 {
     font-family: "Merriweather", serif;
 }
 
-/* Header (Dark Olive Green) */
+/* Header */
 header {
     text-align: center;
     padding: 1rem;
-    background: #556b2f;
+    background: #a39b6f;
     color: #fff;
 }
 
@@ -60,9 +60,9 @@ nav a {
     padding: 0.75rem;
 }
 
-/* Hover (Darker Olive) */
+/* Hover */
 nav a:hover {
-    background: #3e4f1c;
+    background: #8c845a;
     border-radius: 4px;
 }
 
@@ -88,9 +88,9 @@ article img {
     border-radius: 6px;
 }
 
-/* Footer (Dark Olive Green) */
+/* Footer */
 footer {
-    background: #556b2f;
+    background: #a39b6f;
     color: white;
     text-align: center;
     padding: 1rem;

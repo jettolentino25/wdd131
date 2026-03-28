@@ -1,4 +1,3 @@
-// Temple Data
 const temples = [
     { templeName: "Aba Nigeria", location: "Aba, Nigeria", dedicated: "2005, August, 7", area: 11500, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg" },
     { templeName: "Manti Utah", location: "Manti, Utah, United States", dedicated: "1888, May, 21", area: 74792, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg" },
@@ -12,10 +11,8 @@ const temples = [
     { templeName: "Johannesburg South Africa Temple", location: "Johannesburg, South Africa", dedicated: "1985, August, 25", area: 19184, imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg" }
 ];
 
-// Container
 const templeContainer = document.querySelector("#temple-cards");
 
-// Display Function
 function displayTemples(list) {
     templeContainer.innerHTML = "";
 
@@ -34,7 +31,6 @@ function displayTemples(list) {
     });
 }
 
-// Filter Function
 function filterTemples(filter) {
     const filtered = temples.filter(t => {
         const year = parseInt(t.dedicated);
@@ -49,7 +45,6 @@ function filterTemples(filter) {
     displayTemples(filtered);
 }
 
-// Navigation
 document.querySelectorAll(".nav-item").forEach(item => {
     item.addEventListener("click", (e) => {
         e.preventDefault();
@@ -57,11 +52,9 @@ document.querySelectorAll(".nav-item").forEach(item => {
     });
 });
 
-// Footer
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Menu Toggle
 const menuBtn = document.getElementById("menu-button");
 const nav = document.querySelector(".navigation");
 
@@ -69,5 +62,4 @@ menuBtn.addEventListener("click", () => {
     nav.classList.toggle("open");
 });
 
-// Initial Load
 displayTemples(temples);

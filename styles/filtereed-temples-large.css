@@ -1,20 +1,21 @@
 @media (min-width: 768px) {
 
-    #menuBtn {
+    #menu-button {
         display: none;
     }
 
-    #navMenu {
-        display: block;
+    .navigation {
+        display: flex !important;
+        justify-content: center;
     }
 
     nav ul {
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 
-    .gallery {
+    #temple-cards {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
