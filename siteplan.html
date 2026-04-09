@@ -1,61 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Piano Lessons</title>
+
+    <meta name="description" content="Site plan for Piano Lessons Website">
+    <meta name="author" content="Your Name">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
 <body>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Learn Piano the Easy Way 🎹</h1>
-            <p>Fun, step-by-step lessons for beginners to advanced players.</p>
-            <a href="#" class="btn-primary">Start Learning Today</a>
-        </div>
+    <header>
+        <h1>🎹 Piano Lessons Site Plan</h1>
+        <p class="subtitle">Learn Piano Online</p>
     </header>
 
     <main>
 
-        <!-- FEATURES -->
-        <section class="features">
-            <h2>Why Choose Our Piano Lessons?</h2>
+        <!-- NAV -->
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#name">Site Name</a></li>
+                <li><a href="#purpose">Purpose</a></li>
+                <li><a href="#scenarios">Scenarios</a></li>
+                <li><a href="#colors">Color Schema</a></li>
+                <li><a href="#fonts">Typography</a></li>
+                <li><a href="#wireframe">Wireframes</a></li>
+            </ul>
+        </nav>
 
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>🎵 Beginner Friendly</h3>
-                    <p>Start from zero and learn at your own pace with simple lessons.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>📱 Learn Anywhere</h3>
-                    <p>Access lessons on mobile, tablet, or desktop anytime.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>🎼 Real Songs</h3>
-                    <p>Play real songs quickly with guided tutorials and exercises.</p>
-                </div>
-            </div>
+        <!-- SITE NAME -->
+        <section id="name" class="section">
+            <h2>Site Name</h2>
+            <p><strong>PianoMastery</strong></p>
+            <p>This name represents a platform designed to help users master piano skills from beginner to advanced
+                levels.</p>
+            <p><strong>Optional Domain:</strong> pianomastery.com</p>
         </section>
 
-        <!-- ABOUT -->
-        <section class="about">
-            <div class="about-content">
-                <h2>About Our Program</h2>
-                <p>
-                    Our piano lessons are designed to make learning fun, engaging,
-                    and effective. Whether you're a complete beginner or returning
-                    to piano, our structured lessons will guide you step by step.
-                </p>
-                <a href="#" class="btn-secondary">Learn More</a>
-            </div>
+        <!-- PURPOSE -->
+        <section id="purpose" class="section">
+            <h2>Site Purpose</h2>
+            <p>
+                The website provides structured piano lessons, tutorials, and exercises for users of all skill levels.
+                It includes lesson guides, practice tips, and interactive learning features.
+            </p>
         </section>
 
-        <!-- CTA -->
-        <section class="cta">
-            <h2>Start Your Piano Journey Today</h2>
-            <p>Join thousands of students learning piano online.</p>
-            <a href="#" class="btn-primary">Get Started</a>
+        <!-- SCENARIOS -->
+        <section id="scenarios" class="section">
+            <h2>User Scenarios</h2>
+
+            <p><strong>1.</strong> "Can I learn piano even if I have no experience?"</p>
+            <p><strong>2.</strong> "What are the best songs for beginners?"</p>
+            <p><strong>3.</strong> "Can I practice using my phone?"</p>
+        </section>
+
+        <!-- COLORS -->
+        <section id="colors" class="section">
+            <h2>Color Schema</h2>
+
+            <ul>
+                <li><strong>Navy Blue (#003366):</strong> Headers and footer</li>
+                <li><strong>Yellow (#FFB81C):</strong> Buttons and highlights</li>
+            </ul>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section id="fonts" class="section">
+            <h2>Typography</h2>
+
+            <ul>
+                <li><strong>Arial:</strong> Body text</li>
+                <li><strong>Georgia:</strong> Headings</li>
+            </ul>
+        </section>
+
+        <!-- WIREFRAME -->
+        <section id="wireframe" class="section">
+            <h2>Wireframes</h2>
+
+            <h3>Mobile View</h3>
+            <div class="wireframe">
+                <p>Header</p>
+                <p>Navigation</p>
+                <p>Lesson Card</p>
+                <p>Buttons</p>
+                <p>Footer</p>
+            </div>
+
+            <h3>Desktop View</h3>
+            <div class="wireframe">
+                <p>Header</p>
+                <p>Sidebar Navigation</p>
+                <p>Main Content (Lesson Card)</p>
+                <p>Buttons</p>
+                <p>Footer</p>
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> Piano Lessons | Philippines</p>
+        <p>&copy;<span id="year"></span> PianoMastery</p>
+        <p id="lastModified"></p>
     </footer>
 
 </body>
+
+</html>
