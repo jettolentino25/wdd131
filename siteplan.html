@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Site Plan - Piano Lessons</title>
-
+    <title>Talented Keys - Piano Lessons Website Project Plan</title>
     <meta name="description"
-        content="This site plan outlines the purpose, structure, color scheme, typography, and wireframes for a piano lessons website project.">
+        content="Website planning document for Talented Keys, a piano lessons platform. Outlines site purpose, target audience scenarios, color schema, and typography.">
     <meta name="author" content="Jet Tolentino">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Arial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/siteplan.css">
     <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-
     <header>
-        <div class="header-content">
-            <h1> TALENTED KEYS</h1>
-            <p class="subtitle">Piano Lessons Website</p>
-        </div>
+        <h1>Talented Keys</h1>
+        <p class="subtitle">Website Planning Document</p>
     </header>
 
     <main>
-
-        <!-- TABLE OF CONTENTS -->
         <nav class="toc">
             <h2>Table of Contents</h2>
             <ul>
@@ -39,80 +34,73 @@
             </ul>
         </nav>
 
-        <!-- SITE NAME -->
-        <section id="site-name" class="section">
+        <section id="site-name">
             <h2>Site Name</h2>
-            <p><strong>PianoMastery</strong></p>
-            <p>This name represents a website designed to help users learn and master piano skills from beginner to
-                advanced levels.</p>
-            <p><strong>Optional Domain:</strong> pianomastery.com</p>
+            <p><strong>PianoMastery (Talented Keys)</strong></p>
+            <p>I chose this name because it conveys a sense of achievement and skill-building, which is the core goal
+                for my piano students.</p>
         </section>
 
-        <!-- PURPOSE -->
-        <section id="purpose" class="section">
+        <section id="purpose">
             <h2>Site Purpose</h2>
-            <p>
-                The website provides structured piano lessons, tutorials, and exercises for learners of all levels.
-                It serves as an educational platform to improve musical skills and knowledge.
-            </p>
+            <p>The purpose of Talented Keys is to provide an online hub for piano students to access structured lessons,
+                track their progress, and find resources for mastering musical theory and performance.</p>
         </section>
 
-        <!-- SCENARIOS -->
-        <section id="scenarios" class="section">
+        <section id="scenarios">
             <h2>Scenarios</h2>
-            <p>1. Can I learn piano even if I have no experience?</p>
-            <p>2. What are the best songs for beginners?</p>
-            <p>3. Can I practice using my phone?</p>
-        </section>
-
-        <!-- COLOR SCHEMA -->
-        <section id="color-schema" class="section">
-            <h2>Color Schema</h2>
             <ul>
-                <li><strong>Navy Blue (#003366):</strong> Used for header, footer, and headings</li>
-                <li><strong>Yellow (#FFB81C):</strong> Used for accents and highlights</li>
+                <li>"I'm a complete beginner with no musical background. Where should I start my first lesson?"</li>
+                <li>"I want to learn how to play popular songs. Do you have a list of beginner-friendly sheet music?"
+                </li>
             </ul>
         </section>
 
-        <!-- TYPOGRAPHY -->
-        <section id="typography" class="section">
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <p>The following colors will be used to create a professional and focused learning environment:</p>
+            <ul>
+                <li style="color: #003366;"><strong>Primary - Navy Blue (#003366):</strong> Used for headers, footers,
+                    and primary headings.</li>
+                <li style="color: #FFB81C; background-color: #003366; padding: 2px;"><strong>Accent - Yellow
+                        (#FFB81C):</strong> Used for call-to-action buttons and important highlights.</li>
+            </ul>
+        </section>
+
+        <section id="typography">
             <h2>Typography</h2>
             <ul>
-                <li><strong>Arial:</strong> Used for body text</li>
-                <li><strong>Georgia:</strong> Used for headings</li>
+                <li><strong>Georgia (Serif):</strong> Used for all headings to provide a classic, musical feel.</li>
+                <li><strong>Arial (Sans-Serif):</strong> Used for body text to ensure high readability on all devices.
+                </li>
             </ul>
         </section>
 
-        <!-- WIREFRAMES -->
-        <section id="wireframes" class="section">
+        <section id="wireframes">
             <h2>Wireframes</h2>
-
-            <h3>Mobile View</h3>
-            <div class="wireframe">
-                <p>Header</p>
-                <p>Navigation</p>
-                <p>Lesson Content</p>
-                <p>Buttons</p>
-                <p>Footer</p>
-            </div>
-
-            <h3>Desktop View</h3>
-            <div class="wireframe">
-                <p>Header</p>
-                <p>Sidebar Navigation</p>
-                <p>Main Content</p>
-                <p>Buttons</p>
-                <p>Footer</p>
+            <div class="wireframe-container">
+                <h3>Mobile View</h3>
+                <div class="wireframe mobile">
+                    [ Header / Nav ]
+                    [ Hero Image ]
+                    [ Lesson List ]
+                    [ Footer ]
+                </div>
+                <h3>Desktop View</h3>
+                <div class="wireframe desktop">
+                    [ Header ]
+                    [ Navigation Bar ]
+                    [ Main Content Area | Sidebar ]
+                    [ Footer ]
+                </div>
             </div>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy;<span id="year"></span> Jet Tolentino</p>
+        <p>&copy; <span id="year"></span> | Jet Tolentino | Philippines</p>
         <p id="lastModified"></p>
     </footer>
-
 </body>
 
 </html>

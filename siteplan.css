@@ -1,91 +1,78 @@
+/* Apply your color schema to the planning document as requested */
 :root {
-    --primary: #003366;
-    --accent: #ffb81c;
-    --light: #f8f9fa;
-    --white: #ffffff;
-    --dark: #1a1a1a;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --primary-color: #003366;
+    --accent-color: #FFB81C;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: var(--light);
-    color: var(--dark);
+    /* Your selected body font */
     line-height: 1.6;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-/* HEADER */
 header {
-    background: var(--primary);
-    color: var(--white);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
     text-align: center;
-    padding: 1rem;
-    border-bottom: 4px solid var(--accent);
+    border-bottom: 5px solid var(--accent-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    /* Your selected heading font */
+    color: var(--primary-color);
+}
+
+header h1 {
+    color: white;
+    margin: 0;
 }
 
 .subtitle {
-    color: var(--accent);
+    color: var(--accent-color);
+    font-style: italic;
 }
 
-/* MAIN */
 main {
-    max-width: 900px;
-    margin: auto;
-    padding: 1rem;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* BOXED SECTIONS */
-.toc,
-.section {
-    background: var(--white);
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
 }
 
-/* HEADINGS */
-.section h2,
-.toc h2 {
-    color: var(--primary);
-    border-bottom: 2px solid var(--accent);
-    margin-bottom: 10px;
-}
-
-/* NAV */
-.toc ul {
-    list-style: none;
-}
-
-.toc a {
-    text-decoration: none;
-    color: var(--primary);
-    display: block;
-    padding: 5px;
-}
-
-.toc a:hover {
-    background: #eee;
-}
-
-/* WIREFRAMES */
+/* Wireframe Styling */
 .wireframe {
-    border: 2px dashed var(--primary);
-    padding: 1rem;
-    margin-top: 10px;
+    border: 2px dashed var(--primary-color);
+    background-color: #eee;
+    padding: 20px;
     text-align: center;
+    margin: 10px 0;
 }
 
-/* FOOTER */
+.mobile {
+    width: 200px;
+    margin: 0 auto;
+}
+
 footer {
-    background: var(--primary);
-    color: var(--white);
+    background-color: var(--primary-color);
+    color: white;
     text-align: center;
     padding: 1rem;
-    border-top: 4px solid #dc3545;
+    margin-top: 20px;
 }
