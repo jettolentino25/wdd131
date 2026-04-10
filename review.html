@@ -28,20 +28,20 @@
 
     <footer>
         <p>&copy; <span id="footer-year"></span> | Aaron | USA</p>
-        <p>Last Modified: <span id="footer-mod"></span></p>
+        <p id="footer-mod"></p>
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Counter logic
+            // INCREMENT COUNTER: Get count, add 1, save back
             let count = Number(window.localStorage.getItem("reviewCount")) || 0;
             count++;
             window.localStorage.setItem("reviewCount", count);
             document.getElementById("review-count").textContent = count;
 
-            // Footer logic
+            // Footer info
             document.getElementById("footer-year").textContent = new Date().getFullYear();
-            document.getElementById("footer-mod").textContent = document.lastModified;
+            document.getElementById("footer-mod").textContent = `Last Modified: ${document.lastModified}`;
         });
     </script>
 </body>

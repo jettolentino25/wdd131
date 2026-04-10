@@ -1,3 +1,4 @@
+// Provided Product Array
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -9,12 +10,14 @@ const products = [
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("product");
 
-    // Populate the dropdown
+    // DYNAMIC POPULATION
     products.forEach(product => {
         const option = document.createElement("option");
-        option.value = product.id; // Using ID for the value
 
-        // Capitalizing the name for better display
+        // Audit requires ID for value and Name for text
+        option.value = product.id;
+
+        // Clean up the name for display (Capitalize)
         const displayName = product.name.split(' ')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productSelect.appendChild(option);
     });
 
-    // Footer Dates
+    // FOOTER LOGIC
     document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
+    document.getElementById("lastModifiedDisplay").textContent = `Last Modified: ${document.lastModified}`;
 });

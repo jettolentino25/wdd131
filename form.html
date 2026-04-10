@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aaron">
-    <meta name="description" content="Product Review Form for Music Tools">
+    <meta name="description" content="W05 Assignment: Product Review Form">
     <title>Product Review Form | Aaron's Music Tools</title>
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
@@ -18,12 +18,12 @@
 
     <main>
         <form id="review-form" method="get" action="review.html">
-            <!-- Product Select -->
+            <!-- Product Name -->
             <div class="form-section">
                 <label for="product">Product Name <span class="required">*</span></label>
                 <select id="product" name="product" required>
+                    <!-- REQUIRED: First option is placeholder, disabled, and selected -->
                     <option value="" disabled selected>Select a Product ...</option>
-                    <!-- Options populated by JS -->
                 </select>
             </div>
 
@@ -31,11 +31,12 @@
             <fieldset>
                 <legend>Overall Rating <span class="required">*</span></legend>
                 <div class="rating-group">
-                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">☆ 5</label>
-                    <input type="radio" id="star4" name="rating" value="4" required><label for="star4">☆ 4</label>
-                    <input type="radio" id="star3" name="rating" value="3" required><label for="star3">☆ 3</label>
-                    <input type="radio" id="star2" name="rating" value="2" required><label for="star2">☆ 2</label>
-                    <input type="radio" id="star1" name="rating" value="1" required><label for="star1">☆ 1</label>
+                    <!-- Note: Same 'name' attribute groups these radio buttons -->
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&star; 5</label>
+                    <input type="radio" id="star4" name="rating" value="4" required><label for="star4">&star; 4</label>
+                    <input type="radio" id="star3" name="rating" value="3" required><label for="star3">&star; 3</label>
+                    <input type="radio" id="star2" name="rating" value="2" required><label for="star2">&star; 2</label>
+                    <input type="radio" id="star1" name="rating" value="1" required><label for="star1">&star; 1</label>
                 </div>
             </fieldset>
 
@@ -49,10 +50,14 @@
             <fieldset>
                 <legend>Useful Features (Check all that apply)</legend>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                    <label><input type="checkbox" name="features" value="ease"> Ease of Use</label>
-                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                    <label for="feature1"><input type="checkbox" id="feature1" name="features" value="performance">
+                        Performance</label>
+                    <label for="feature2"><input type="checkbox" id="feature2" name="features" value="durability">
+                        Durability</label>
+                    <label for="feature3"><input type="checkbox" id="feature3" name="features" value="ease"> Ease of
+                        Use</label>
+                    <label for="feature4"><input type="checkbox" id="feature4" name="features" value="design">
+                        Design</label>
                 </div>
             </fieldset>
 
@@ -73,8 +78,8 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | 🎹 Aaron J Evan M. Tolentino 🎹| Manila, Philippines</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> | Aaron | USA</p>
+        <p id="lastModifiedDisplay"></p>
     </footer>
 </body>
 
