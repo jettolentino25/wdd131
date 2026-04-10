@@ -1,4 +1,4 @@
-/* --- TYPOGRAPHY (Criteria 10) --- */
+/* APPLY TYPOGRAPHY (Criteria 10) */
 h1,
 h2,
 h3 {
@@ -9,43 +9,42 @@ h3 {
 
 body {
     font-family: 'Arial', sans-serif;
-    /* Body Font Usage */
     margin: 0;
     background-color: #f8f9fa;
-    color: #333;
     line-height: 1.6;
+    color: #333;
 }
 
-/* --- COLOR SCHEME (Criteria 8) --- */
+/* APPLY COLOR SCHEME (Criteria 8) */
 header,
 footer {
     background-color: #003366;
-    /* Primary Color Usage */
+    /* Primary Color */
     color: white;
     text-align: center;
     padding: 1.5rem;
 }
 
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
     background: white;
-    padding: 25px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section {
-    border-left: 6px solid #FFB81C;
+    border-left: 5px solid #FFB81C;
     /* Accent Color Usage */
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     padding: 15px;
     background-color: #fff;
 }
 
 /* COLOR SWATCHES FOR DOCUMENTATION */
 .color-swatch {
-    padding: 3px 10px;
-    border-radius: 5px;
+    padding: 2px 10px;
+    border-radius: 4px;
     font-weight: bold;
 }
 
@@ -59,15 +58,15 @@ section {
     color: black;
 }
 
-/* --- WIREFRAME STYLING --- */
+/* WIREFRAME STYLING */
 .wireframe-box {
     border: 2px dashed #003366;
-    margin: 15px 0;
-    background: #fafafa;
+    margin: 20px 0;
+    background: #fdfdfd;
 }
 
 .mobile {
-    width: 280px;
+    width: 300px;
     margin: 0 auto;
 }
 
@@ -82,7 +81,7 @@ section {
 .wf-content,
 .wf-hero,
 .wf-grid {
-    padding: 15px;
+    padding: 20px;
     border-bottom: 1px solid #ddd;
     text-align: center;
 }
@@ -94,7 +93,7 @@ section {
 .wf-sidebar {
     width: 25%;
     background: #FFB81C;
-    padding: 15px;
+    padding: 20px;
     color: black;
 }
 
@@ -104,5 +103,5 @@ section {
 
 footer p {
     margin: 5px 0;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
