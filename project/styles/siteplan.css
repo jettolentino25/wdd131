@@ -1,9 +1,8 @@
-/* PANCAKE STACK LAYOUT (The Magical Part!) */
+/* PANCAKE STACK LAYOUT */
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    /* Ensures the footer stays at the bottom of the screen */
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #F8F9FA;
@@ -11,7 +10,7 @@ body {
     color: #2D6A4F;
 }
 
-/* TYPOGRAPHY */
+/* TYPOGRAPHY & BIG BRAND TITLE */
 h1,
 h2,
 h3 {
@@ -20,16 +19,22 @@ h3 {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    /* Bolder, bigger brand presence! */
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Adds depth */
 }
 
 header p {
-    margin: 5px 0 0;
-    font-size: 1.1rem;
+    margin: 10px 0 0;
+    font-size: 1.4rem;
+    font-style: italic;
     color: #D8F3DC;
+    /* Light mint for contrast */
 }
 
 /* COLOR SCHEME */
@@ -39,16 +44,17 @@ footer {
     /* Primary Forest Green */
     color: #FFFFFF;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 1rem;
+    /* More vertical breathing room */
 }
 
 main {
     max-width: 1000px;
     width: 90%;
-    margin: 20px auto;
+    margin: 30px auto;
     background: #FFFFFF;
-    padding: 30px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 section {
@@ -60,7 +66,7 @@ section {
 
 /* COLOR SWATCHES */
 .color-swatch {
-    padding: 3px 12px;
+    padding: 5px 15px;
     border-radius: 4px;
     font-weight: bold;
     display: inline-block;
@@ -122,4 +128,20 @@ section {
 footer p {
     margin: 5px 0;
     font-size: 0.9rem;
+}
+
+/* RESPONSIVE SCALING FOR BIG TITLE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+        /* Scales down for mobile */
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 20px;
+    }
 }
