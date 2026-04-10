@@ -1,3 +1,4 @@
+// Criteria 5: Product Array
 const products = [
     { id: "fc-1888", name: "flux capacitor" },
     { id: "fc-2050", name: "power laces" },
@@ -6,40 +7,32 @@ const products = [
     { id: "jj-1969", name: "warp equalizer" }
 ];
 
-function populateProductSelect() {
-    const selectElement = document.getElementById('productName');
-    if (!selectElement) return;
-
-    products.forEach(product => {
-        const option = document.createElement('option');
-        option.value = product.id; // Audit requires ID for value
-        // Capitalize name
-        const formattedName = product.name.toUpperCase();
-        option.textContent = formattedName;
-        selectElement.appendChild(option);
-    });
-}
-
-function displayReviewCount() {
-    const counterElement = document.getElementById('reviewCount');
-    if (counterElement) {
-        let count = Number(localStorage.getItem('productReviewCount')) || 0;
-        // Increment only on review page load
-        if (window.location.pathname.includes('review.html')) {
-            count++;
-            localStorage.setItem('productReviewCount', count);
-        }
-        counterElement.textContent = count;
-    }
-}
-
-function updateFooter() {
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    populateProductSelect();
-    displayReviewCount();
-    updateFooter();
+    // 1. Populate Product Select (Criteria 5)
+    const productSelect = document.getElementById('productName');
+    if (productSelect) {
+        products.forEach(product => {
+            const option = document.createElement('option');
+            option.value = product.id; // Use ID for value
+            option.textContent = product.name.toUpperCase(); // Display Name
+            productSelect.appendChild(option);
+        });
+    }
+
+    // 2. Handle localStorage Counter (Criteria 6)
+    if (window.location.pathname.includes('review.html')) {
+        let count = Number(localStorage.getItem('reviewCounter')) || 0;
+        count++;
+        localStorage.setItem('reviewCounter', count);
+
+        const display = document.getElementById('reviewCountDisplay');
+        if (display) display.textContent = count;
+    }
+
+    // 3. Update Footer Info
+    const yearSpan = document.getElementById('currentyear');
+    const modSpan = document.getElementById('lastModified');
+
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    if (modSpan) modSpan.textContent = `Last Modified: ${document.lastModified}`;
 });

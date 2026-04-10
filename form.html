@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FIXED: Full name for the audit -->
     <meta name="author" content="Aaron J Evan M. Tolentino">
-    <!-- FIXED: Description is now 85 characters (Audit requires 50-160) -->
     <meta name="description"
-        content="Share your feedback on our music theory tools and products with this product review form.">
+        content="Submit a product review for our music theory tools. Share your experience with installation, performance, and design.">
     <title>Product Review Form | Aaron's Music Tools</title>
+    <!-- Google Fonts for Typography (Criteria 7) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css">
+    <!-- FIXED: Script in head with defer (Criteria 1 Audit) -->
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -28,10 +28,10 @@
     <main class="container">
         <div class="form-card">
             <h2>📝 Product Review</h2>
-            <p class="subtitle">Share your experience with our music theory tools</p>
+            <p class="subtitle">Your feedback helps us refine our harmonic architecture.</p>
 
             <form id="reviewForm" method="get" action="review.html">
-                <!-- Product Name -->
+                <!-- Product Name (Criteria 4 & 5) -->
                 <div class="form-group">
                     <label for="productName" class="required-label">Product Name</label>
                     <select id="productName" name="productName" required>
@@ -39,9 +39,9 @@
                     </select>
                 </div>
 
-                <!-- Overall Rating -->
-                <div class="form-group">
-                    <label class="required-label">Overall Rating</label>
+                <!-- Overall Rating (Criteria 4) -->
+                <fieldset class="form-group">
+                    <legend class="required-label">Overall Rating</legend>
                     <div class="rating-simple">
                         <div class="rating-item">
                             <input type="radio" id="rating1" name="rating" value="1" required>
@@ -64,17 +64,17 @@
                             <label for="rating5">⭐ 5</label>
                         </div>
                     </div>
-                </div>
+                </fieldset>
 
-                <!-- Date of Installation -->
+                <!-- Date of Installation (Criteria 4) -->
                 <div class="form-group">
                     <label for="installDate" class="required-label">Date of Installation</label>
                     <input type="date" id="installDate" name="installDate" required>
                 </div>
 
                 <!-- Useful Features -->
-                <div class="form-group">
-                    <label>Useful Features (Check all that apply)</label>
+                <fieldset class="form-group">
+                    <legend>Useful Features (Check all that apply)</legend>
                     <div class="checkbox-group">
                         <div class="checkbox-option">
                             <input type="checkbox" id="featurePerformance" name="features" value="performance">
@@ -93,7 +93,7 @@
                             <label for="featureDesign">Design</label>
                         </div>
                     </div>
-                </div>
+                </fieldset>
 
                 <!-- Written Review -->
                 <div class="form-group">
@@ -117,8 +117,6 @@
         <p>&copy; <span id="currentyear"></span> 🎹 Aaron J Evan M. Tolentino 🎹 | USA</p>
         <p id="lastModified"></p>
     </footer>
-
-    <script src="scripts/form.js"></script>
 </body>
 
 </html>
