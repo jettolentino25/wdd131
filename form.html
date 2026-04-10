@@ -5,109 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aaron J Evan M. Tolentino">
-    <meta name="description" content="Official feedback form for enterprise product assessment and quality control.">
-    <title>Product Review System | Corporate Portal</title>
-
-    <!-- Professional Typography -->
+    <meta name="description"
+        content="Share your feedback on our music theory tools and products with this professional product review form.">
+    <title>Product Review Form | Aaron's Music Tools</title>
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="styles/form.css">
+    <!-- FIXED: Script in HEAD with DEFER (Criteria 1 Audit Requirement) -->
     <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <h1 class="header-title">ENTERPRISE REVIEW FORM</h1>
-            <p class="tagline">Standardized Quality Assessment System</p>
+            <h1 class="header-title">Product Review System</h1>
         </div>
     </header>
-
     <main class="container">
         <div class="form-card">
-            <h2 class="section-title">Product Evaluation</h2>
+            <h2>📝 Product Review</h2>
             <p class="subtitle">Your feedback helps us refine our harmonic architecture.</p>
-
             <form id="reviewForm" method="get" action="review.html">
-                <!-- Asset Selection -->
+                <!-- Product Name -->
                 <div class="form-group">
-                    <label for="productName" class="required-label">Select Asset</label>
+                    <label for="productName" class="required-label">Product Name</label>
                     <select id="productName" name="productName" required>
-                        <option value="" disabled selected>Select from active inventory...</option>
+                        <option value="" disabled selected>Select a Product ...</option>
                     </select>
                 </div>
-
-                <!-- Rating Fieldset -->
-                <fieldset class="form-group rating-fieldset">
-                    <legend class="required-label">Performance Rating</legend>
-                    <div class="rating-options">
+                <!-- Overall Rating -->
+                <fieldset class="form-group">
+                    <legend class="required-label">Overall Rating</legend>
+                    <div class="rating-simple">
                         <div class="rating-item">
                             <input type="radio" id="rating1" name="rating" value="1" required>
-                            <label for="rating1">1 🤩 Poor</label>
+                            <label for="rating1">🤩 1 Poor </label>
                         </div>
                         <div class="rating-item">
                             <input type="radio" id="rating2" name="rating" value="2" required>
-                            <label for="rating2">2 🤩 Fair</label>
+                            <label for="rating2">🤩 2 Fair </label>
                         </div>
                         <div class="rating-item">
                             <input type="radio" id="rating3" name="rating" value="3" required>
-                            <label for="rating3">3 🤩 Average</label>
+                            <label for="rating3">🤩 3 Average </label>
                         </div>
                         <div class="rating-item">
                             <input type="radio" id="rating4" name="rating" value="4" required>
-                            <label for="rating4">4 🤩 Very Good</label>
+                            <label for="rating4">🤩 4 Very Good </label>
                         </div>
                         <div class="rating-item">
                             <input type="radio" id="rating5" name="rating" value="5" required>
-                            <label for="rating5">5 🤩 Excellent</label>
+                            <label for="rating5">🤩 5 Excellent</label>
                         </div>
                     </div>
                 </fieldset>
-
-                <!-- Installation Date -->
+                <!-- Date of Installation -->
                 <div class="form-group">
-                    <label for="installDate" class="required-label">Date of Deployment</label>
+                    <label for="installDate" class="required-label">Date of Installation</label>
                     <input type="date" id="installDate" name="installDate" required>
                 </div>
-
-                <!-- Features Checklist -->
-                <fieldset class="form-group features-fieldset">
-                    <legend>Operational Strengths (Optional)</legend>
-                    <div class="feature-grid">
-                        <label><input type="checkbox" name="features" value="reliability"> Reliability</label>
-                        <label><input type="checkbox" name="features" value="efficiency"> Efficiency</label>
-                        <label><input type="checkbox" name="features" value="stability"> Stability</label>
-                        <label><input type="checkbox" name="features" value="security"> Security</label>
+                <!-- Useful Features -->
+                <fieldset class="form-group">
+                    <legend>Useful Features (Check all that apply)</legend>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="featurePerformance" name="features" value="performance">
+                            <label for="featurePerformance">Performance</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="featureReliability" name="features" value="reliability">
+                            <label for="featureReliability">Reliability</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="featureEaseOfUse" name="features" value="easeOfUse">
+                            <label for="featureEaseOfUse">Ease of Use</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="featureDesign" name="features" value="design">
+                            <label for="featureDesign">Design</label>
+                        </div>
                     </div>
                 </fieldset>
-
-                <!-- Review Text -->
+                <!-- Written Review -->
                 <div class="form-group">
-                    <label for="writtenReview">Technical Observations</label>
+                    <label for="writtenReview">Written Review (Optional)</label>
                     <textarea id="writtenReview" name="writtenReview"
-                        placeholder="Enter detailed performance metrics or observations..."></textarea>
+                        placeholder="Tell us more about your experience..."></textarea>
                 </div>
-
                 <!-- User Name -->
                 <div class="form-group">
-                    <label for="userName">Assessor Name</label>
-                    <input type="text" id="userName" name="userName" placeholder="Full name (optional)">
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" name="userName" placeholder="Enter your name">
                 </div>
-
-                <button type="submit" class="submit-btn">SUBMIT OFFICIAL REPORT</button>
+                <button type="submit" class="submit-btn">📮 Submit Review</button>
             </form>
         </div>
     </main>
-
     <footer>
-        <div class="footer-content">
-            <p>&copy; <span id="currentyear"></span> Aaron J Evan M. Tolentino | USA</p>
-            <p id="lastModified" class="mod-date"></p>
-        </div>
+        <p>&copy; <span id="currentyear"></span> 🎹 Aaron J Evan M. Tolentino 🎹 | USA</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
