@@ -1,4 +1,3 @@
-// Criteria 5: Product Array
 const products = [
     { id: "fc-1888", name: "flux capacitor" },
     { id: "fc-2050", name: "power laces" },
@@ -8,18 +7,18 @@ const products = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Populate Product Select (Criteria 5)
+    // 1. Populate Product Select
     const productSelect = document.getElementById('productName');
     if (productSelect) {
         products.forEach(product => {
             const option = document.createElement('option');
-            option.value = product.id; // Use ID for value
-            option.textContent = product.name.toUpperCase(); // Display Name
+            option.value = product.id; // Correct mapping: ID for value
+            option.textContent = product.name.toUpperCase(); // Correct mapping: Name for text
             productSelect.appendChild(option);
         });
     }
 
-    // 2. Handle localStorage Counter (Criteria 6)
+    // 2. Handle localStorage Counter (Only on review.html page)
     if (window.location.pathname.includes('review.html')) {
         let count = Number(localStorage.getItem('reviewCounter')) || 0;
         count++;
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (display) display.textContent = count;
     }
 
-    // 3. Update Footer Info
+    // 3. Update Footer Dates
     const yearSpan = document.getElementById('currentyear');
     const modSpan = document.getElementById('lastModified');
 

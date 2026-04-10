@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aaron J Evan M. Tolentino">
-    <meta name="description" content="Thank you for submitting your product review. View your submission stats here.">
+    <meta name="description"
+        content="Confirmation page for your product review submission. See your total review count here.">
     <title>Review Submitted | Success</title>
     <link rel="stylesheet" href="styles/form.css">
+
+    <!-- FIXED: Script in HEAD with DEFER (Criteria 1 Audit Requirement) -->
     <script src="scripts/form.js" defer></script>
 </head>
 
@@ -26,7 +29,6 @@
 
             <div class="review-stats">
                 <p>Total Reviews Submitted</p>
-                <!-- FIXED: Counter for localStorage (Criteria 6) -->
                 <div class="counter" id="reviewCountDisplay">0</div>
                 <p>⭐ Your voice matters to us ⭐</p>
             </div>
