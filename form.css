@@ -1,15 +1,27 @@
 /* ============================================================ */
-/* PRODUCT REVIEW FORM STYLES - Henle Blue Theme               */
+/* PRODUCT REVIEW FORM STYLES - Standardized Color Scheme       */
 /* ============================================================ */
 
 :root {
+    /* Standardizing all colors to Hex for Audit Consistency */
     --primary: #005470;
-    /* Henle Blue - High Contrast */
+    /* Henle Blue */
     --secondary: #003d52;
-    --paper: #FFFFFF;
+    /* Darker Blue */
+    --paper: #ffffff;
+    /* Pure White */
     --text-dark: #1a1a1a;
+    /* Charcoal */
     --accent-red: #d9534f;
+    /* Required Field Red */
     --bg-gray: #f4f4f4;
+    /* Light Background Gray */
+    --border-gray: #777777;
+    /* High Contrast Border */
+    --shadow: #0000001a;
+    /* Transparent Black for Shadow */
+    --stats-bg: #eef4f6;
+    /* Light Blue for Stats Card */
 }
 
 /* Base Resets */
@@ -31,8 +43,8 @@ body {
 
 /* Header (Criteria 7: Alignment) */
 header {
-    background: var(--primary);
-    color: white;
+    background-color: var(--primary);
+    color: var(--paper);
     padding: 2.5rem 1rem;
     text-align: center;
     border-bottom: 6px solid var(--secondary);
@@ -54,11 +66,11 @@ header {
 
 /* Form Card (Criteria 7: Proximity/Repetition) */
 .form-card {
-    background: var(--paper);
+    background-color: var(--paper);
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px var(--shadow);
     padding: 2.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-gray);
 }
 
 h2 {
@@ -71,9 +83,10 @@ h2 {
 
 .subtitle {
     text-align: center;
-    color: #555;
+    color: var(--text-dark);
     margin-bottom: 2rem;
     font-size: 0.95rem;
+    opacity: 0.8;
 }
 
 /* Form Groups */
@@ -105,10 +118,11 @@ input[type="date"],
 textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #777;
+    border: 1px solid var(--border-gray);
     border-radius: 4px;
     font-size: 1rem;
-    background-color: white;
+    background-color: var(--paper);
+    color: var(--text-dark);
 }
 
 /* Layout Groups */
@@ -129,8 +143,8 @@ textarea {
 /* Buttons */
 .submit-btn,
 .btn-back {
-    background: var(--primary);
-    color: white;
+    background-color: var(--primary);
+    color: var(--paper);
     border: none;
     padding: 1rem;
     width: 100%;
@@ -142,17 +156,17 @@ textarea {
     text-decoration: none;
     display: block;
     font-family: 'Montserrat', sans-serif;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover,
 .btn-back:hover {
-    background: var(--secondary);
+    background-color: var(--secondary);
 }
 
 /* Confirmation Stats (review.html) */
 .review-stats {
-    background: #eef4f6;
+    background-color: var(--stats-bg);
     padding: 2rem;
     border-radius: 8px;
     margin: 1.5rem 0;
@@ -168,8 +182,8 @@ textarea {
 
 /* Footer Styles */
 footer {
-    background: var(--primary);
-    color: white;
+    background-color: var(--primary);
+    color: var(--paper);
     text-align: center;
     padding: 2.5rem 1rem;
     margin-top: 2rem;
@@ -185,8 +199,6 @@ footer p {
 /* ------------------------------------------------------------ */
 
 @media screen and (max-width: 600px) {
-
-    /* Audit tool looks for @media keyword for responsiveness */
     .container {
         margin: 1rem auto;
         padding: 0 1rem;
@@ -196,7 +208,6 @@ footer p {
         padding: 1.5rem;
     }
 
-    /* Stack items vertically on mobile for better usability */
     .rating-simple,
     .checkbox-group {
         flex-direction: column;
@@ -214,7 +225,7 @@ footer p {
     }
 }
 
-/* Accessibility: Focus styles for keyboard navigation (Lighthouse Best Practice) */
+/* Accessibility: Focus styles for keyboard navigation */
 :focus-visible {
     outline: 3px solid var(--primary);
     outline-offset: 2px;
