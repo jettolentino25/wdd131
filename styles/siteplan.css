@@ -1,59 +1,88 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f8f9fa;
+/* APPLY TYPOGRAPHY (Criteria 10) */
+h1,
+h2,
+h3 {
+    font-family: 'Georgia', serif;
+    color: #003366;
+    /* Primary Color Usage */
 }
 
-/* HEADER */
-header {
-    background: #003366;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* APPLY COLOR SCHEME (Criteria 8) */
+header,
+footer {
+    background-color: #003366;
+    /* Primary Color */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1.5rem;
 }
 
-/* MAIN */
 main {
-    max-width: 900px;
-    margin: auto;
+    max-width: 1000px;
+    margin: 20px auto;
     background: white;
-    padding: 20px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* SECTIONS */
 section {
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
+    border-left: 5px solid #FFB81C;
+    /* Accent Color Usage */
+    margin-bottom: 30px;
     padding: 15px;
+    background-color: #fff;
 }
 
-h2 {
-    color: #003366;
+/* COLOR SWATCHES FOR DOCUMENTATION */
+.color-swatch {
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
-/* LOGO */
-.logo-box {
-    border: 2px solid #003366;
-    padding: 20px;
-    text-align: center;
-    background: #eee;
+.primary {
+    background-color: #003366;
+    color: white;
 }
 
-/* WIREFRAMES */
+.accent {
+    background-color: #FFB81C;
+    color: black;
+}
+
+/* WIREFRAME STYLING */
 .wireframe-box {
-    border: 2px solid black;
-    margin: 10px 0;
+    border: 2px dashed #003366;
+    margin: 20px 0;
+    background: #fdfdfd;
+}
+
+.mobile {
+    width: 300px;
+    margin: 0 auto;
 }
 
 .wf-header,
 .wf-footer {
-    background: #ccc;
-    text-align: center;
+    background: #003366;
+    color: white;
     padding: 10px;
+    text-align: center;
 }
 
-.wf-content {
+.wf-content,
+.wf-hero,
+.wf-grid {
     padding: 20px;
+    border-bottom: 1px solid #ddd;
     text-align: center;
 }
 
@@ -62,20 +91,17 @@ h2 {
 }
 
 .wf-sidebar {
-    width: 30%;
-    background: #eee;
+    width: 25%;
+    background: #FFB81C;
     padding: 20px;
+    color: black;
 }
 
 .wf-main {
-    width: 70%;
-    padding: 20px;
+    width: 75%;
 }
 
-/* FOOTER */
-footer {
-    background: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px;
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
 }
