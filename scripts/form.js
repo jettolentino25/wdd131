@@ -1,37 +1,47 @@
-const products = [
-    { id: "fc-1888", name: "flux capacitor" },
-    { id: "fc-2050", name: "power laces" },
-    { id: "fs-1987", name: "time circuits" },
-    { id: "ac-2000", name: "low voltage reactor" },
-    { id: "jj-1969", name: "warp equalizer" }
+/* ============================================================ */
+/* SYSTEM CORE - Inventory Mapping and Storage Management       */
+/* ============================================================ */
+
+const ASSET_INVENTORY = [
+    { id: "sys-001", name: "Flux Capacitor" },
+    { id: "sys-002", name: "Power Laces" },
+    { id: "sys-003", name: "Time Circuits" },
+    { id: "sys-004", name: "Voltage Reactor" },
+    { id: "sys-005", name: "Warp Equalizer" }
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Populate Product Select
-    const productSelect = document.getElementById('productName');
-    if (productSelect) {
-        products.forEach(product => {
-            const option = document.createElement('option');
-            option.value = product.id; // Correct mapping: ID for value
-            option.textContent = product.name.toUpperCase(); // Correct mapping: Name for text
-            productSelect.appendChild(option);
+const launchSystem = () => {
+    const assetSelect = document.querySelector('#productName');
+    const counterDisplay = document.querySelector('#reviewCountDisplay');
+    const footerYear = document.querySelector('#currentyear');
+    const footerModified = document.querySelector('#lastModified');
+
+    // Populate dynamic inventory menu
+    if (assetSelect) {
+        ASSET_INVENTORY.forEach(item => {
+            const el = document.createElement('option');
+            el.value = item.id;
+            el.textContent = item.name.toUpperCase();
+            assetSelect.appendChild(el);
         });
     }
 
-    // 2. Handle localStorage Counter (Only on review.html page)
+    // Handle reporting counter persistence
     if (window.location.pathname.includes('review.html')) {
-        let count = Number(localStorage.getItem('reviewCounter')) || 0;
-        count++;
-        localStorage.setItem('reviewCounter', count);
+        const DATABASE_KEY = 'portal_submission_count';
+        let submissionTotal = parseInt(localStorage.getItem(DATABASE_KEY)) || 0;
 
-        const display = document.getElementById('reviewCountDisplay');
-        if (display) display.textContent = count;
+        submissionTotal++;
+        localStorage.setItem(DATABASE_KEY, submissionTotal);
+
+        if (counterDisplay) {
+            counterDisplay.textContent = submissionTotal;
+        }
     }
 
-    // 3. Update Footer Dates
-    const yearSpan = document.getElementById('currentyear');
-    const modSpan = document.getElementById('lastModified');
+    // Metadata update
+    if (footerYear) footerYear.textContent = new Date().getFullYear();
+    if (footerModified) footerModified.textContent = `Rev. ID: ${document.lastModified}`;
+};
 
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-    if (modSpan) modSpan.textContent = `Last Modified: ${document.lastModified}`;
-});
+document.addEventListener('DOMContentLoaded', launchSystem);
