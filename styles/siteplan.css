@@ -25,7 +25,7 @@ header {
     background-color: var(--primary);
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem;
     border-bottom: 5px solid var(--accent);
 }
 
@@ -101,14 +101,12 @@ button:hover {
 .logo-box {
     border: 2px solid var(--primary);
     padding: 20px;
-    font-size: 1.5rem;
     text-align: center;
     background: #f0f0f0;
     margin-bottom: 10px;
-    border-radius: 6px;
 }
 
-/* IMAGE PLACEHOLDERS */
+/* IMAGES */
 .image-grid {
     display: flex;
     gap: 10px;
@@ -121,15 +119,12 @@ button:hover {
     padding: 30px;
     text-align: center;
     background: #fafafa;
-    border-radius: 6px;
 }
 
 /* WIREFRAMES */
 .wireframe-box {
     border: 2px solid #000;
     margin: 15px 0;
-    border-radius: 6px;
-    overflow: hidden;
 }
 
 .wf-header,
@@ -137,7 +132,6 @@ button:hover {
     background: #ccc;
     padding: 10px;
     text-align: center;
-    font-weight: bold;
 }
 
 .wf-content {
@@ -161,12 +155,7 @@ button:hover {
     padding: 20px;
 }
 
-.desktop .wf-header,
-.desktop .wf-footer {
-    background: #bbb;
-}
-
-/* HIDDEN CONTENT */
+/* HIDDEN */
 .hidden {
     display: none;
 }
@@ -177,12 +166,10 @@ footer {
     color: white;
     text-align: center;
     padding: 1.5rem;
-    margin-top: 20px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-
     .image-grid {
         flex-direction: column;
     }
