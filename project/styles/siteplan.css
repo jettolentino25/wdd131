@@ -1,68 +1,86 @@
-/* APPLY TYPOGRAPHY (Criteria 10) */
+/* PANCAKE STACK LAYOUT (The Magical Part!) */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    /* Ensures the footer stays at the bottom of the screen */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F8F9FA;
+    line-height: 1.6;
+    color: #2D6A4F;
+}
+
+/* TYPOGRAPHY */
 h1,
 h2,
 h3 {
     font-family: 'Georgia', serif;
-    color: #003366;
-    /* Primary Color Usage */
+    color: #1B4332;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
+header h1 {
+    font-size: 2.5rem;
     margin: 0;
-    background-color: #f8f9fa;
-    line-height: 1.6;
-    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* APPLY COLOR SCHEME (Criteria 8) */
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1rem;
+    color: #D8F3DC;
+}
+
+/* COLOR SCHEME */
 header,
 footer {
-    background-color: #003366;
-    /* Primary Color */
-    color: white;
+    background-color: #1B4332;
+    /* Primary Forest Green */
+    color: #FFFFFF;
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 main {
     max-width: 1000px;
+    width: 90%;
     margin: 20px auto;
-    background: white;
+    background: #FFFFFF;
     padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 section {
-    border-left: 5px solid #FFB81C;
-    /* Accent Color Usage */
-    margin-bottom: 30px;
-    padding: 15px;
-    background-color: #fff;
+    border-left: 6px solid #52B788;
+    /* Emerald Accent */
+    margin-bottom: 40px;
+    padding-left: 20px;
 }
 
-/* COLOR SWATCHES FOR DOCUMENTATION */
+/* COLOR SWATCHES */
 .color-swatch {
-    padding: 2px 10px;
+    padding: 3px 12px;
     border-radius: 4px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .primary {
-    background-color: #003366;
+    background-color: #1B4332;
     color: white;
 }
 
 .accent {
-    background-color: #FFB81C;
-    color: black;
+    background-color: #52B788;
+    color: white;
 }
 
 /* WIREFRAME STYLING */
 .wireframe-box {
-    border: 2px dashed #003366;
+    border: 2px dashed #1B4332;
     margin: 20px 0;
-    background: #fdfdfd;
+    background: #FCFCFC;
 }
 
 .mobile {
@@ -72,7 +90,7 @@ section {
 
 .wf-header,
 .wf-footer {
-    background: #003366;
+    background: #1B4332;
     color: white;
     padding: 10px;
     text-align: center;
@@ -82,7 +100,7 @@ section {
 .wf-hero,
 .wf-grid {
     padding: 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #D8F3DC;
     text-align: center;
 }
 
@@ -92,9 +110,9 @@ section {
 
 .wf-sidebar {
     width: 25%;
-    background: #FFB81C;
+    background: #B7E4C7;
     padding: 20px;
-    color: black;
+    color: #1B4332;
 }
 
 .wf-main {
