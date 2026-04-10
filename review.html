@@ -4,46 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aaron J Evan M. Tolentino">
+    <meta name="description" content="Review confirmation page - Thank you for your feedback on our music tools.">
     <title>Review Submitted | Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css">
 </head>
 
-<body class="confirmation-page">
+<body>
     <header>
-        <h1>Submission Received</h1>
+        <div class="header-container">
+            <h1 class="header-title">Product Review System</h1>
+        </div>
     </header>
 
-    <main class="confirmation-card">
-        <div class="success-icon">✔️</div>
-        <h2>Thank You for Your Feedback!</h2>
-        <p>Your review has been recorded. This helps us refine our music theory tools.</p>
+    <main class="container">
+        <div class="form-card review-card">
+            <div class="success-icon">✅</div>
+            <h2>Thank You for Your Review!</h2>
+            <p class="subtitle">Your feedback helps us improve our tools</p>
 
-        <div class="counter-box">
-            <p>Total Reviews Completed:</p>
-            <span id="review-count">0</span>
+            <div class="review-stats">
+                <p>Total Reviews Submitted</p>
+                <div class="counter" id="reviewCount">0</div>
+                <p>⭐ Your voice matters to us ⭐</p>
+            </div>
+
+            <a href="form.html" class="btn-back">📝 Write Another Review</a>
         </div>
-
-        <a href="form.html" class="back-link">Submit Another Review</a>
     </main>
 
     <footer>
-        <p>&copy; <span id="footer-year"></span> | Aaron | USA</p>
-        <p id="footer-mod"></p>
+        <p>&copy; <span id="currentyear"></span> 🎹 Aaron J Evan M. Tolentino 🎹 | USA</p>
+        <p id="lastModified"></p>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // INCREMENT COUNTER: Get count, add 1, save back
-            let count = Number(window.localStorage.getItem("reviewCount")) || 0;
-            count++;
-            window.localStorage.setItem("reviewCount", count);
-            document.getElementById("review-count").textContent = count;
-
-            // Footer info
-            document.getElementById("footer-year").textContent = new Date().getFullYear();
-            document.getElementById("footer-mod").textContent = `Last Modified: ${document.lastModified}`;
-        });
-    </script>
+    <script src="scripts/form.js"></script>
 </body>
 
 </html>
