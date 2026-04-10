@@ -1,7 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const currentYear = new Date().getFullYear();
-    const lastModified = document.lastModified;
 
-    document.getElementById("currentyear").textContent = currentYear;
-    document.getElementById("lastModified").textContent = "Last Modified: " + lastModified;
+    // YEAR + LAST MODIFIED
+    const yearEl = document.getElementById("currentyear");
+    const modEl = document.getElementById("lastModified");
+
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    if (modEl) {
+        modEl.textContent = "Last Modified: " + document.lastModified;
+    }
+
+    // START BUTTON
+    const startBtn = document.getElementById("startBtn");
+    if (startBtn) {
+        startBtn.addEventListener("click", function () {
+            alert("Welcome! Start your piano journey today 🎹");
+        });
+    }
+
+    // TOGGLE ABOUT INFO
+    const toggleBtn = document.getElementById("toggleBtn");
+    const moreInfo = document.getElementById("moreInfo");
+
+    if (toggleBtn && moreInfo) {
+        toggleBtn.addEventListener("click", function () {
+            moreInfo.classList.toggle("hidden");
+        });
+    }
+
+    // SCROLL TO TOP BUTTON
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
 });

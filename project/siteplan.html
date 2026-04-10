@@ -1,14 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Piano Learning Site Plan</title>
+
+    <meta name="description"
+        content="A website plan for an online piano learning platform offering beginner to advanced lessons.">
+    <meta name="author" content="Aaron J Evan M. Tolentino">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+
 <body>
 
     <header class="hero">
         <div class="hero-content">
             <h1>Learn Piano the Easy Way 🎹</h1>
             <p>Fun, step-by-step lessons for beginners to advanced players.</p>
-            <a href="#" class="btn-primary">Start Learning Today</a>
+            <button id="startBtn" class="btn-primary">Start Learning Today</button>
         </div>
     </header>
 
     <main>
+
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>PianoMastery Hub</strong></p>
+            <p>This name reflects a platform focused on mastering piano skills.</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>
+                Provides structured piano lessons, tutorials, and exercises for all learners.
+            </p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>How can I start learning piano as a beginner?</li>
+                <li>Where can I learn easy songs quickly?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Scheme</h2>
+            <p><strong>#003366</strong> – headers, footer</p>
+            <p><strong>#FFB81C</strong> – buttons, accents</p>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p><strong>Georgia</strong> – headings</p>
+            <p><strong>Arial</strong> – body</p>
+        </section>
 
         <!-- FEATURES -->
         <section class="features">
@@ -17,17 +67,17 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <h3>🎵 Beginner Friendly</h3>
-                    <p>Start from zero and learn at your own pace with simple lessons.</p>
+                    <p>Start from zero at your own pace.</p>
                 </div>
 
                 <div class="feature-card">
                     <h3>📱 Learn Anywhere</h3>
-                    <p>Access lessons on mobile, tablet, or desktop anytime.</p>
+                    <p>Access lessons anytime, anywhere.</p>
                 </div>
 
                 <div class="feature-card">
                     <h3>🎼 Real Songs</h3>
-                    <p>Play real songs quickly with guided tutorials and exercises.</p>
+                    <p>Play real songs quickly.</p>
                 </div>
             </div>
         </section>
@@ -37,25 +87,47 @@
             <div class="about-content">
                 <h2>About Our Program</h2>
                 <p>
-                    Our piano lessons are designed to make learning fun, engaging,
-                    and effective. Whether you're a complete beginner or returning
-                    to piano, our structured lessons will guide you step by step.
+                    Our lessons are fun, structured, and effective for all levels.
                 </p>
-                <a href="#" class="btn-secondary">Learn More</a>
+
+                <button id="toggleBtn" class="btn-secondary">Learn More</button>
+
+                <p id="moreInfo" class="hidden">
+                    We provide guided lessons, practice exercises, and real song tutorials
+                    to help you progress faster and enjoy learning piano.
+                </p>
             </div>
         </section>
 
         <!-- CTA -->
         <section class="cta">
             <h2>Start Your Piano Journey Today</h2>
-            <p>Join thousands of students learning piano online.</p>
-            <a href="#" class="btn-primary">Get Started</a>
+            <p>Join thousands of students learning online.</p>
+            <button id="scrollTopBtn" class="btn-primary">Get Started</button>
+        </section>
+
+        <!-- WIREFRAMES -->
+        <section>
+            <h2>Wireframes</h2>
+
+            <div class="wireframe">
+                <h3>Mobile View</h3>
+                <p>Header → Sections → Footer</p>
+            </div>
+
+            <div class="wireframe">
+                <h3>Desktop View</h3>
+                <p>Header → Grid Layout → Footer</p>
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> Piano Lessons | Philippines</p>
+        <p>&copy; <span id="currentyear"></span> Piano Lessons | Philippines</p>
+        <p id="lastModified"></p>
     </footer>
 
 </body>
+
+</html>

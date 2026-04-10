@@ -10,35 +10,47 @@ body {
     background-color: var(--light);
     color: var(--dark);
     margin: 0;
-    line-height: 1.6;
 }
 
-header {
+/* HEADER */
+.hero {
     background-color: var(--primary);
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 1rem;
     border-bottom: 5px solid var(--accent);
 }
 
-h1,
-h2 {
+.hero h1 {
     font-family: Georgia, serif;
 }
 
-.subtitle {
-    color: var(--accent);
+/* BUTTONS */
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    padding: 10px 20px;
     font-weight: bold;
 }
 
+.btn-secondary {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+}
+
+/* MAIN */
 main {
     max-width: 900px;
-    margin: 20px auto;
+    margin: auto;
     padding: 20px;
     background: white;
 }
 
-.toc,
 section {
     border: 1px solid #ddd;
     padding: 20px;
@@ -46,17 +58,37 @@ section {
 }
 
 section h2 {
+    font-family: Georgia, serif;
     color: var(--primary);
     border-bottom: 2px solid var(--accent);
 }
 
+/* FEATURES */
+.feature-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.feature-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+/* HIDDEN CONTENT */
+.hidden {
+    display: none;
+}
+
+/* WIREFRAME */
 .wireframe {
     border: 2px dashed var(--primary);
     padding: 20px;
     background-color: #eee;
+    margin-top: 10px;
     text-align: center;
 }
 
+/* FOOTER */
 footer {
     background-color: var(--primary);
     color: white;
