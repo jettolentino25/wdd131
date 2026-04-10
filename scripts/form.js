@@ -1,74 +1,41 @@
-/* ============================================================ */
-/* SYSTEM CORE - Inventory Mapping and Storage Management       */
-/* ============================================================ */
-
-// 1. Product Array - Criteria 5: Used to populate the Product Name select
-const ASSET_INVENTORY = [
-    { id: "sys-001", name: "Flux Capacitor" },
-    { id: "sys-002", name: "Power Laces" },
-    { id: "sys-003", name: "Time Circuits" },
-    { id: "sys-004", name: "Voltage Reactor" },
-    { id: "sys-005", name: "Warp Equalizer" }
+// 1. Exact Product Array provided by BYU-I
+const products = [
+    { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
+    { id: "fc-2050", name: "power laces", averagerating: 4.7 },
+    { id: "fs-1987", name: "time circuits", averagerating: 3.5 },
+    { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
+    { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
 
-/**
- * Main initialization function triggered on DOMContentLoaded
- */
-const launchSystem = () => {
-    // Select necessary DOM elements
-    const assetSelect = document.querySelector('#productName');
-    const counterDisplay = document.querySelector('#reviewCountDisplay');
-    const footerYear = document.querySelector('#currentyear');
-    const footerModified = document.querySelector('#lastModified');
+document.addEventListener('DOMContentLoaded', () => {
+    const productSelect = document.querySelector('#productName');
 
-    // --- POPULATE PRODUCT SELECT (Criteria 5) ---
-    if (assetSelect) {
-        // Clear any existing options except the first placeholder
-        while (assetSelect.options.length > 1) {
-            assetSelect.remove(1);
-        }
-
-        // Map through array and append options
-        ASSET_INVENTORY.forEach(item => {
-            const el = document.createElement('option');
-            el.value = item.id; // Assign ID as the value
-            el.textContent = item.name.toUpperCase(); // Display Name in uppercase
-            assetSelect.appendChild(el);
+    // 2. Populate Product Options (Criteria: name for display, id for value)
+    if (productSelect) {
+        products.forEach(product => {
+            const option = document.createElement('option');
+            option.value = product.id;
+            option.textContent = product.name;
+            productSelect.appendChild(option);
         });
     }
 
-    // --- LOCALSTORAGE COUNTER (Criteria 6) ---
-    // Check if the current page is the confirmation page
-    const isReviewPage = window.location.pathname.endsWith('review.html');
+    // 3. LocalStorage Counter (Criteria: Only increment on review.html load)
+    if (window.location.pathname.includes('review.html')) {
+        let reviewCount = Number(localStorage.getItem('reviewSubmissionCount')) || 0;
+        reviewCount++;
+        localStorage.setItem('reviewSubmissionCount', reviewCount);
 
-    if (isReviewPage) {
-        const DATABASE_KEY = 'portal_submission_count';
-
-        // Retrieve current count or default to 0
-        let submissionTotal = parseInt(localStorage.getItem(DATABASE_KEY)) || 0;
-
-        // Increment the count upon landing on review.html
-        submissionTotal++;
-
-        // Update localStorage with the new value
-        localStorage.setItem(DATABASE_KEY, submissionTotal);
-
-        // Update the UI display
-        if (counterDisplay) {
-            counterDisplay.textContent = submissionTotal;
+        const display = document.querySelector('#reviewCountDisplay');
+        if (display) {
+            display.textContent = reviewCount;
         }
     }
 
-    // --- FOOTER METADATA ---
-    if (footerYear) {
-        footerYear.textContent = new Date().getFullYear();
-    }
+    // 4. Common Footer Content
+    const yearSpan = document.querySelector('#currentyear');
+    const modSpan = document.querySelector('#lastModified');
 
-    if (footerModified) {
-        // Display the last modification date of the document
-        footerModified.textContent = `Revision ID: ${document.lastModified}`;
-    }
-};
-
-// Event Listener to trigger logic once the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', launchSystem);
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    if (modSpan) modSpan.textContent = `Last Modified: ${document.lastModified}`;
+});
