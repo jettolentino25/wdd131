@@ -157,3 +157,38 @@ header nav {
     color: var(--dark);
     border-color: var(--dark);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* MOBILE NAV */
+#menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #menu-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--dark);
+        flex-direction: column;
+        display: none;
+        padding: 2rem 0;
+    }
+
+    #menu-list.show {
+        display: flex;
+    }
+}
