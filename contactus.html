@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact The Great Northern Rush —passionate guides, epic rapids, and rafting adventures designed for thrill and fun.">
+    <meta name="author" content="Allison Brewer">
+    <title>Contact Us | The Great Northern Rush </title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <!-- logo -->
+            <img class="logo" src="images/smiling_paddle_small.png" alt="The Happy Paddle Raft Co. Logo">
+            <!-- nav elements -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <div class="info">
+            <h1>The Happy Paddle Raft Co.</h1>
+            <!-- <img src="images/rafting.jpg" alt="have fun rafting with the Happy Rafting Co"> -->
+            <address>
+                531 E Vine Dr<br>
+                Fort Collins, CO 80524<br>
+                United States<br>
+                <a href="tel:+13035551234">+1 (303) 555-1234</a><br>
+                <a href="mailto:hello@happypaddleraftco.com">hello@happypaddleraftco.com</a>
+            </address>
+        </div>
+
+        <div class="mapform">
+            <!-- embedded google map -->
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.5674306094224!2d-105.07238825908031!3d40.59530267153038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87694a8fae7cd67d%3A0xc4dacaf5f4da3f88!2s531%20E%20Vine%20Dr%2C%20Fort%20Collins%2C%20CO%2080524!5e0!3m2!1sen!2sus!4v1769701496000!5m2!1sen!2sus"
+                    width="600" height="450" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- contact form -->
+            <form>
+                <h2>Send Us a Message</h2>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="Name">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <fieldset>
+                    <legend>Message Purpose</legend>
+                    <div>
+                        <label for="general" class="radio-option">
+                            <input type="radio" id="general" name="purpose" value="general" checked>
+                            General Inquiry</label>
+                    </div>
+
+                    <div>
+                        <label for="reservation" class="radio-option">
+                            <input type="radio" id="reservation" name="purpose" value="reservation">
+                            Reservation Question</label>
+                    </div>
+
+                    <div>
+                        <label for="website" class="radio-option">
+                            <input type="radio" id="website" name="purpose" value="website">
+                            Website Suggestion</label>
+                    </div>
+                </fieldset>
+
+                <div class="newsletter">
+                    <label for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message"></textarea>
+                </div>
+
+                <button type="submit">Get in Touch!</button>
+            </form>
+        </div>
+
+        <!-- we are here to serve you -->
+        <div class="adventure">
+            <h2>We Are Here to Serve You</h2>
+            <figure><img src="images/manemployee.jpg" alt="Jack Rivers, Senior River Guide">
+                <figcaption>Jack Rivers, <em>Senior River Guide</em></figcaption>
+            </figure>
+            <figure><img src="images/womanemployee.jpg" alt="Maya Brooks, Rafting Trip Manager" class="centerface">
+                <figcaption>Maya Brooks, <em>Rafting Trip Manager</em></figcaption>
+            </figure>
+            <figure><img src="images/dogemployee.jpg" alt="Sir Paddleton, Float Test Engineer">
+                <figcaption>Sir Paddleton, <em>Float Test Engineer</em></figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&#169; 2026 The Happy Paddle Raft Co. | Allison Brewer</p>
+        <nav class="socialmedia">
+            <a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="Facebook logo"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.svg" alt="Instagram logo"></a>
+            <a href="https://www.youtube.com/"><img src="images/youtube.svg" alt="Youtube logo"></a>
+        </nav>
+    </footer>
+</body>
+
+</html>
