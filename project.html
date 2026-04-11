@@ -9,9 +9,8 @@
     <meta name="author" content="Aaron J Evan M. Tolentino">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-    <!-- Using the unified CSS files we discussed -->
-    <link rel="stylesheet" href="styles/project2.css"> <!-- Fonts First -->
-    <link rel="stylesheet" href="styles/project1.css"> <!-- Layout Second -->
+    <link rel="stylesheet" href="styles/project2.css">
+    <link rel="stylesheet" href="styles/project1.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,15 +23,10 @@
 <body>
     <header>
         <nav>
-            <a href="project.html" id="logo" class="flex-center">
+            <a href="project.html" id="logo">
                 <img src="images/logo.png" alt="Talented Keys Logo">
                 <span class="logo-text">TALENTED KEYS</span>
             </a>
-            <!-- Mobile Menu Toggle (Criteria 10) -->
-            <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list" aria-label="Open Menu">
-                <img src="images/menu.svg" alt="Menu">
-            </button>
-            <!-- Horizontal Navigation (Your Request) -->
             <ul id="menu-list">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -43,9 +37,8 @@
     </header>
 
     <main>
-        <!-- Hero Section: Above the fold images should NOT be lazy-loaded for better LCP scores -->
-        <section id="hero" class="section-container flex-gap">
-            <div class="hero-text flex-center flex-column">
+        <section id="hero" class="section-container">
+            <div class="hero-text">
                 <h1>Where Technical Precision Meets Artistry</h1>
                 <p>Providing world-class piano instruction since 2016. Whether you are a young beginner or an advanced
                     performer, we help you master the keys with passion and purpose.</p>
@@ -59,11 +52,10 @@
             </div>
         </section>
 
-        <!-- About Preview Section (Criteria 7 - Lazy Loading) -->
         <section id="about-preview">
-            <div class="section-container flex-gap">
+            <div class="section-container">
                 <div class="text-block">
-                    <h2>Inspired by the Urtext Tradition</h2>
+                    <h2>Inspired by the Holisitc Tradition</h2>
                     <p>At Talented Keys, we believe in the strongest potential—an unwavering commitment to musical
                         accuracy and beauty.</p>
                 </div>
@@ -73,22 +65,17 @@
             </div>
         </section>
 
-        <!-- Dynamic Content Section (Criteria 13 - JS Injection) -->
         <section id="lessons" class="section-container">
-            <h2 class="flex-center">Our Programs</h2>
-            <div class="grid-container">
-                <!-- JavaScript (project.js) will inject cards here using the 'programs' array -->
-            </div>
+            <h2 style="text-align: center; font-family: 'Playfair Display'; margin-bottom: 2rem;">Our Programs</h2>
+            <div class="grid-container"></div>
         </section>
     </main>
 
     <footer>
         <div id="footer-content">
             <div class="important-info">
-                <div class="logo flex-gap flex-center">
-                    <!-- Footer images should be optimized and lazy loaded -->
-                    <img src="images/piano2.webp" alt="Talented Keys Logo Inverse" loading="lazy" width="50"
-                        height="50">
+                <div class="logo">
+                    <img src="images/piano2.jpg" alt="Talented Keys Logo">
                     <strong>Talented Keys</strong>
                 </div>
                 <p>Teaching the next generation of pianists in Quezon City since 2016.</p>
@@ -98,17 +85,15 @@
                     <h3>Studio</h3>
                     <ul>
                         <li><a href="about.html">About Me</a></li>
-                        <!-- Link to References as required by rubric (Criteria 5) -->
                         <li><a href="books.html#references">References</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
 
-        <div class="copyright-info flex-center">
+        <div class="copyright-info">
             <small>&copy; <span id="year"></span> 🎹 Aaron J Evan M. Tolentino - Manila, Philippines 🎹</small>
             <small id="lastModified"></small>
-            <!-- LocalStorage Visit Counter (Criteria 15) -->
             <small id="visitCount"></small>
         </div>
     </footer>

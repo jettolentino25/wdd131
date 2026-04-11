@@ -1,21 +1,18 @@
-/* --- 1. VARIABLES & RESET (Criteria 3 & 4) --- */
 :root {
     --light: #F9F7F2;
     --dark: #1A2B3C;
     --accent: #C5A059;
     --white: #ffffff;
     --grey-light: #E8E4D9;
-    --grey-medium: #8d8d8d;
     --font-primary: "Playfair Display", serif;
     --font-secondary: "Lato", sans-serif;
-    --fs-heading: 3.5rem;
-    --fs-sub: 2.2rem;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -25,36 +22,31 @@ body {
     line-height: 1.8;
 }
 
-/* --- 2. HEADER & HORIZONTAL NAV (Criteria 4 & 6) --- */
+/* Header & Nav Fixes */
 header {
     background-color: var(--dark);
-    /* Solid Dark Background */
     padding: 1.5rem 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* THE LOGO (Static Solid Offset - Classmate Style) */
 #logo {
     display: flex;
     align-items: center;
-    text-decoration: none;
 }
 
 #logo img {
     width: 85px;
-    /* Bigger Logo */
     height: auto;
-    background: transparent;
-    /* Static Solid Shadow: 4px right, 4px down, 0px blur (solid) */
     filter: drop-shadow(4px 4px 0px var(--accent));
 }
 
@@ -63,83 +55,96 @@ header nav {
     font-family: var(--font-primary);
     font-weight: 700;
     font-size: 1.5rem;
-    letter-spacing: 2px;
     margin-left: 1rem;
     text-transform: uppercase;
 }
 
-/* HORIZONTAL MENU (Your Request) */
 #menu-list {
     list-style: none;
     display: flex;
-    /* Horizontal Layout */
     gap: 2.5rem;
     align-items: center;
 }
 
 #menu-list a {
-    text-decoration: none;
     color: var(--white);
     text-transform: uppercase;
     font-size: 0.85rem;
-    letter-spacing: 1.5px;
-    transition: 0.3s ease;
+    font-weight: 700;
 }
 
-#menu-list a:hover,
-#menu-list a.active {
+#menu-list a.active,
+#menu-list a:hover {
     color: var(--accent);
 }
 
-/* Mobile Toggle - Hidden on Desktop */
-#menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+/* Centering Logic */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 5%;
 }
 
-#menu-toggle img {
-    width: 30px;
-    filter: invert(1);
-    /* Makes black icon white */
+.hero-text h1 {
+    font-family: var(--font-primary);
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
 }
 
-/* --- 3. RESPONSIVE MEDIA QUERIES (Criteria 6) --- */
-@media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
-    }
-
-    #menu-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--dark);
-        padding: 2rem;
-        text-align: center;
-    }
-
-    #menu-list.is-active {
-        display: flex;
-    }
+.hero-text p {
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-/* --- 4. BUTTONS --- */
+.flex-gap {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    border-radius: 4px;
+}
+
+#about-preview {
+    background-color: var(--grey-light);
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+#about-preview .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-block h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.visual-block img {
+    max-width: 100%;
+    margin-top: 2rem;
+}
+
+/* Buttons */
 .button {
     background: var(--accent);
     color: var(--white);
     padding: 0.8rem 1.8rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 700;
     border: 2px solid var(--accent);
     transition: 0.3s;
-    display: inline-block;
+    font-weight: 700;
 }
 
 .button:hover {
@@ -149,11 +154,6 @@ header nav {
 
 .button.outline {
     background: transparent;
-    color: var(--white);
-    border-color: var(--white);
-}
-
-.button.outline:hover {
-    background: var(--white);
     color: var(--dark);
+    border-color: var(--dark);
 }
