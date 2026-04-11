@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/project1.css">
+    <link rel="stylesheet" href="styles/project2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <title>About the Instructor — Talented Keys</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" id="logo" class="flex-center">
+                <img src="images/logo.png" alt="Talented Keys Logo">
+                <span class="logo-text">TALENTED KEYS</span>
+            </a>
+            <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list" aria-label="Open Menu">
+                <img src="images/menu.svg" alt="Menu">
+            </button>
+            <ul id="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="contact.html" class="button btn-nav">Enroll Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section id="page-header" class="flex-center flex-column">
+            <h1>The Heart Behind the Keys</h1>
+            <p>Our journey began with a simple belief: music is a lifelong conversation.</p>
+        </section>
+
+        <!-- Autobiography Section (Sidebar Layout Concept) -->
+        <section id="bio" class="section-container flex-gap">
+            <div class="visual-block">
+                <!-- Add your photo here! -->
+                <img src="images/instructor-portrait.jpg" alt="Aaron at the Piano" loading="lazy">
+            </div>
+            <div class="text-block">
+                <h2>Meet Aaron</h2>
+                <p>Hello! I am Aaron, the founder and lead instructor at Talented Keys. My fascination with music
+                    started at a young age, leading me to explore the intricate world of functional harmony—what I like
+                    to call 'The Harmonic Architect'.</p>
+                <p>With over a decade of experience, I've dedicated my life to helping students find their unique voice.
+                    Whether we are dissecting a Chopin Nocturne or learning the basics of a major scale, my goal is to
+                    blend technical precision with genuine artistry.</p>
+                <p>Outside the studio, you'll often find me developing tools for music theory or attending classical
+                    recitals to stay inspired by the Urtext tradition.</p>
+            </div>
+        </section>
+
+        <!-- Studio Philosophy (Grid Layout Concept) -->
+        <section id="philosophy">
+            <div class="grid-container">
+                <div class="lesson-card">
+                    <h3>Integrity</h3>
+                    <p>We honor the original intentions of the composer while fostering personal interpretation.</p>
+                </div>
+                <div class="lesson-card">
+                    <h3>Discipline</h3>
+                    <p>Great music is built on a foundation of consistent, mindful practice habits.</p>
+                </div>
+                <div class="lesson-card">
+                    <h3>Joy</h3>
+                    <p>At the end of the day, the goal is to share the light and beauty that music brings to the world.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <div class="important-info">
+                <div class="logo flex-gap flex-center">
+                    <img src="images/piano2.webp" alt="Talented Keys">
+                    <strong>Talented Keys</strong>
+                </div>
+                <p>Dedicated to excellence in music education since 2016.</p>
+            </div>
+            <nav id="links">
+                <div class="product">
+                    <h3>Studio</h3>
+                    <ul>
+                        <li><a href="about.html">Our Method</a></li>
+                        <li><a href="lessons.html">Programs</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </div>
+                <div class="references">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+            <div class="copyright-info flex-center">
+                <small>&copy; <span id="year"></span> Talented Keys Piano Studio</small>
+                <small id="lastModified"></small>
+                <!-- Added storage tracker display for Criteria 15 -->
+                <small id="visitCount"></small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/project.js"></script>
+</body>
+
+</html>
