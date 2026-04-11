@@ -7,8 +7,10 @@
     <meta name="description"
         content="Meet Aaron, a graduate of UP College of Music, dedicated to holistic piano education in Quezon City.">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/project1.css">
+
     <link rel="stylesheet" href="styles/project2.css">
+    <link rel="stylesheet" href="styles/project1.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,31 +20,30 @@
 </head>
 
 <body>
-    <header>å
+    <header>
         <nav>
-            <a href="project.html" id="logo" class="flex-center">
+            <a href="project.html" id="logo">
                 <img src="images/logo.png" alt="Talented Keys Logo">
                 <span class="logo-text">TALENTED KEYS</span>
             </a>
-            <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list" aria-label="Open Menu">
-                <img src="images/menu.svg" alt="Menu">
-            </button>
             <ul id="menu-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="books.html">Books</a></li>
                 <li><a href="contact.html" class="button btn-nav">Enroll Now</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="bio" class="section-container flex-gap">
+        <section id="bio" class="section-container">
             <div class="visual-block">
                 <img src="images/teacher2.JPG" alt="Aaron at the Piano" loading="lazy">
             </div>
             <div class="text-block">
-                <h2>Meet Aaron</h2>
-                <p>Hello! I am Aaron, the founder of Talented Keys. I studied at the <strong>University of the
+                <h2>Meet Teacher Jet</h2>
+                <p>Hello! I am Aaron J Evan M. Tolentino, the founder of Talented Keys. I studied at the
+                    <strong>University of the
                         Philippines College of Music</strong>, majoring in <strong>Music Education</strong>.</p>
                 <p>My journey has allowed me to master various teaching methods designed to help students learn
                     <strong>holistically</strong>. I focus on developing the mind, ear, and heart of every student to
@@ -53,23 +54,35 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div id="footer-content">
             <div class="important-info">
-                <div class="logo flex-gap flex-center">
-                    <img src="images/teacher1.webp" alt="Talented Keys" loading="lazy">
+                <div class="logo">
+                    <img src="images/grandpiano.webp" alt="Talented Keys Logo">
                     <strong>Talented Keys</strong>
                 </div>
                 <p>Excellence in music since 2016.</p>
             </div>
-            <hr>
-            <div class="copyright-info flex-center">
-                <small>&copy; <span id="year"></span> 🎹 Aaron J Evan M. Tolentino - Manila, Philippines 🎹</small>
-                <small id="lastModified"></small>
-                <small id="visitCount"></small>
-            </div>
+
+            <nav id="footer-links">
+                <div class="footer-nav-group">
+                    <h3>Studio</h3>
+                    <ul>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="books.html#references">References</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="copyright-info">
+            <small>&copy; <span id="year"></span> 🎹 Aaron J Evan M. Tolentino - Manila, Philippines 🎹</small>
+            <small id="lastModified"></small>
+            <small id="visitCount"></small>
         </div>
     </footer>
+
     <script src="scripts/project.js"></script>
 </body>
 
