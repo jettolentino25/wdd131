@@ -27,12 +27,13 @@ body {
 
 /* --- 2. HEADER & HORIZONTAL NAV (Criteria 4 & 6) --- */
 header {
-    background-color: var(--dark); /* Solid Dark Background */
+    background-color: var(--dark);
+    /* Solid Dark Background */
     padding: 1.5rem 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
@@ -49,11 +50,12 @@ header nav {
 }
 
 #logo img {
-    width: 85px; /* Bigger Logo */
+    width: 85px;
+    /* Bigger Logo */
     height: auto;
     background: transparent;
     /* Static Solid Shadow: 4px right, 4px down, 0px blur (solid) */
-    filter: drop-shadow(4px 4px 0px var(--accent)); 
+    filter: drop-shadow(4px 4px 0px var(--accent));
 }
 
 .logo-text {
@@ -69,7 +71,8 @@ header nav {
 /* HORIZONTAL MENU (Your Request) */
 #menu-list {
     list-style: none;
-    display: flex; /* Horizontal Layout */
+    display: flex;
+    /* Horizontal Layout */
     gap: 2.5rem;
     align-items: center;
 }
@@ -83,7 +86,7 @@ header nav {
     transition: 0.3s ease;
 }
 
-#menu-list a:hover, 
+#menu-list a:hover,
 #menu-list a.active {
     color: var(--accent);
 }
@@ -98,12 +101,16 @@ header nav {
 
 #menu-toggle img {
     width: 30px;
-    filter: invert(1); /* Makes black icon white */
+    filter: invert(1);
+    /* Makes black icon white */
 }
 
 /* --- 3. RESPONSIVE MEDIA QUERIES (Criteria 6) --- */
 @media (max-width: 768px) {
-    #menu-toggle { display: block; }
+    #menu-toggle {
+        display: block;
+    }
+
     #menu-list {
         display: none;
         flex-direction: column;
@@ -115,7 +122,10 @@ header nav {
         padding: 2rem;
         text-align: center;
     }
-    #menu-list.is-active { display: flex; }
+
+    #menu-list.is-active {
+        display: flex;
+    }
 }
 
 /* --- 4. BUTTONS --- */
@@ -132,7 +142,10 @@ header nav {
     display: inline-block;
 }
 
-.button:hover { background: transparent; color: var(--accent); }
+.button:hover {
+    background: transparent;
+    color: var(--accent);
+}
 
 .button.outline {
     background: transparent;
@@ -140,4 +153,7 @@ header nav {
     border-color: var(--white);
 }
 
-.button.outline:hover { background: var(--white); color: var(--dark); }
+.button.outline:hover {
+    background: var(--white);
+    color: var(--dark);
+}
