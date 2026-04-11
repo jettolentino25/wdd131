@@ -1,4 +1,4 @@
-/* --- 1. VARIABLES & RESET --- */
+/* --- 1. VARIABLES & RESET (Criteria 3 & 4) --- */
 :root {
     --light: #F9F7F2;
     --dark: #1A2B3C;
@@ -25,15 +25,14 @@ body {
     line-height: 1.8;
 }
 
-/* --- 2. HEADER & HORIZONTAL NAV (Your Request) --- */
+/* --- 2. HEADER & HORIZONTAL NAV (Criteria 4 & 6) --- */
 header {
-    background-color: var(--dark);
-    /* Solid Background */
+    background-color: var(--dark); /* Solid Dark Background */
     padding: 1.5rem 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 header nav {
@@ -42,19 +41,19 @@ header nav {
     align-items: center;
 }
 
-/* THE LOGO (Offset Shadow & Bigger - Classmate Style) */
-#logo img {
-    width: 75px;
-    /* Bigger Logo */
-    height: auto;
-    /* This creates the 'layered' look. Ensure your logo is a transparent PNG! */
-    filter: drop-shadow(4px 4px 0px var(--accent));
-    transition: 0.3s ease;
+/* THE LOGO (Static Solid Offset - Classmate Style) */
+#logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-#logo:hover img {
-    filter: drop-shadow(5px 5px 0px var(--white));
-    transform: scale(1.05);
+#logo img {
+    width: 85px; /* Bigger Logo */
+    height: auto;
+    background: transparent;
+    /* Static Solid Shadow: 4px right, 4px down, 0px blur (solid) */
+    filter: drop-shadow(4px 4px 0px var(--accent)); 
 }
 
 .logo-text {
@@ -63,13 +62,14 @@ header nav {
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 2px;
+    margin-left: 1rem;
+    text-transform: uppercase;
 }
 
 /* HORIZONTAL MENU (Your Request) */
 #menu-list {
     list-style: none;
-    display: flex;
-    /* Horizontal Layout */
+    display: flex; /* Horizontal Layout */
     gap: 2.5rem;
     align-items: center;
 }
@@ -80,10 +80,10 @@ header nav {
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 1.5px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-#menu-list a:hover,
+#menu-list a:hover, 
 #menu-list a.active {
     color: var(--accent);
 }
@@ -98,16 +98,12 @@ header nav {
 
 #menu-toggle img {
     width: 30px;
-    filter: invert(1);
-    /* Makes black icon white */
+    filter: invert(1); /* Makes black icon white */
 }
 
-/* --- 3. RESPONSIVE MEDIA QUERIES --- */
+/* --- 3. RESPONSIVE MEDIA QUERIES (Criteria 6) --- */
 @media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
-    }
-
+    #menu-toggle { display: block; }
     #menu-list {
         display: none;
         flex-direction: column;
@@ -119,10 +115,7 @@ header nav {
         padding: 2rem;
         text-align: center;
     }
-
-    #menu-list.is-active {
-        display: flex;
-    }
+    #menu-list.is-active { display: flex; }
 }
 
 /* --- 4. BUTTONS --- */
@@ -139,10 +132,7 @@ header nav {
     display: inline-block;
 }
 
-.button:hover {
-    background: transparent;
-    color: var(--accent);
-}
+.button:hover { background: transparent; color: var(--accent); }
 
 .button.outline {
     background: transparent;
@@ -150,7 +140,4 @@ header nav {
     border-color: var(--white);
 }
 
-.button.outline:hover {
-    background: var(--white);
-    color: var(--dark);
-}
+.button.outline:hover { background: var(--white); color: var(--dark); }

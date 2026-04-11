@@ -1,4 +1,4 @@
-/* --- 1. FONT OPTIMIZATION --- */
+/* --- 1. FONT OPTIMIZATION (Criteria 3 & 4) --- */
 @font-face {
     font-family: 'Playfair Display';
     font-style: normal;
@@ -10,35 +10,42 @@
 @font-face {
     font-family: 'Lato';
     font-style: normal;
-    /* Fixed: Removed stray 'å' */
     font-weight: 400;
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHvxk6XweuBCY.woff2) format('woff2');
 }
 
-/* --- 2. GRID SYSTEM (RAM Technique) --- */
+/* --- 2. GRID SYSTEM (RAM Technique - Criteria 3 & 6) --- */
 .grid-container {
     display: grid;
+    /* RAM: Repeat, Auto-fit, Minmax for perfect responsiveness */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
+    padding: 2rem 0;
 }
 
 .lesson-card {
     padding: 2.5rem;
     background: var(--white);
     border-top: 5px solid var(--grey-light);
-    transition: 0.3s;
+    transition: 0.3s ease;
     border-radius: 4px;
 }
 
-.lesson-card:hover,
-.lesson-card.active {
+.lesson-card:hover, .lesson-card.active {
     border-top-color: var(--accent);
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-/* --- 3. FOOTER --- */
+.card-icon {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* --- 3. FOOTER (Criteria 4) --- */
 footer {
     padding: 5rem 10% 2rem;
     background: var(--dark);
@@ -49,12 +56,16 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 3rem;
 }
 
 .copyright-info {
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
     font-size: 0.85rem;
 }
