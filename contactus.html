@@ -5,122 +5,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Contact The Great Northern Rush —passionate guides, epic rapids, and rafting adventures designed for thrill and fun.">
-    <meta name="author" content="Allison Brewer">
-    <title>Contact Us | The Great Northern Rush </title>
-    <link rel="stylesheet" href="styles/rafting.css">
+        content="Enroll at Talented Keys Piano Studio in Quezon City. Start your musical journey with premium piano lessons in Metro Manila.">
+    <meta name="author" content="Aaron">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/project1.css">
+    <link rel="stylesheet" href="styles/project2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Contact & Enroll | Talented Keys — Quezon City</title>
 </head>
 
 <body>
     <header>
-        <div class="nav-bar">
-            <!-- logo -->
-            <img class="logo" src="images/smiling_paddle_small.png" alt="The Happy Paddle Raft Co. Logo">
-            <!-- nav elements -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-
+        <nav>
+            <a href="index.html" id="logo" class="flex-center">
+                <img src="images/logo.png" alt="Talented Keys Logo">
+                <span class="logo-text">TALENTED KEYS</span>
+            </a>
+            <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list" aria-label="Open Menu">
+                <img src="images/menu.svg" alt="Menu">
+            </button>
+            <ul id="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="contact.html" class="button btn-nav active">Enroll Now</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <div class="info">
-            <h1>The Happy Paddle Raft Co.</h1>
-            <!-- <img src="images/rafting.jpg" alt="have fun rafting with the Happy Rafting Co"> -->
-            <address>
-                531 E Vine Dr<br>
-                Fort Collins, CO 80524<br>
-                United States<br>
-                <a href="tel:+13035551234">+1 (303) 555-1234</a><br>
-                <a href="mailto:hello@happypaddleraftco.com">hello@happypaddleraftco.com</a>
-            </address>
-        </div>
 
-        <div class="mapform">
-            <!-- embedded google map -->
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.5674306094224!2d-105.07238825908031!3d40.59530267153038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87694a8fae7cd67d%3A0xc4dacaf5f4da3f88!2s531%20E%20Vine%20Dr%2C%20Fort%20Collins%2C%20CO%2080524!5e0!3m2!1sen!2sus!4v1769701496000!5m2!1sen!2sus"
-                    width="600" height="450" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <main>
+        <section id="contact-hero" class="flex-center flex-column">
+            <h1>Begin Your Musical Journey</h1>
+            <p>Ready to master the keys? Fill out the form below to schedule your first consultation in our Quezon City
+                studio.</p>
+        </section>
+
+        <div class="mapform section-container flex-gap">
+            <!-- Studio Info & Map -->
+            <div class="info">
+                <h2>Visit Our Studio</h2>
+                <address>
+                    Aurora Blvd Corner Project 4<br>
+                    Quezon City, Metro Manila, 1109<br>
+                    Philippines<br><br>
+                    <strong>Phone:</strong> <a href="tel:+639276696154">+63 927 669 6154</a><br>
+                    <strong>Email:</strong> <a href="mailto:jettolentino25@gmail.com">jettolentino25@gmail.com</a>
+                </address>
+                <div class="map">
+                    <!-- Updated Map for Aurora Blvd & Project 4, QC -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.973367123456!2d121.062345!3d14.624567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b78f8e7cd67d%3A0xc4dacaf5f4da3f88!2sAurora%20Blvd%2C%20Quezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1715000000000!5m2!1sen!2sph"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
 
-            <!-- contact form -->
-            <form>
-                <h2>Send Us a Message</h2>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="Name">
+            <!-- Enrollment Form (Criteria 8) -->
+            <form id="enroll-form">
+                <h2>Inquiry Form</h2>
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter full name">
                 </div>
 
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="email@example.com">
                 </div>
+
                 <fieldset>
-                    <legend>Message Purpose</legend>
-                    <div>
-                        <label for="general" class="radio-option">
-                            <input type="radio" id="general" name="purpose" value="general" checked>
-                            General Inquiry</label>
-                    </div>
-
-                    <div>
-                        <label for="reservation" class="radio-option">
-                            <input type="radio" id="reservation" name="purpose" value="reservation">
-                            Reservation Question</label>
-                    </div>
-
-                    <div>
-                        <label for="website" class="radio-option">
-                            <input type="radio" id="website" name="purpose" value="website">
-                            Website Suggestion</label>
-                    </div>
+                    <legend>Program of Interest</legend>
+                    <label><input type="radio" name="program" value="early" checked> Early Childhood</label>
+                    <label><input type="radio" name="program" value="classical"> Classical Mastery</label>
+                    <label><input type="radio" name="program" value="adult"> Adult & Leisure</label>
                 </fieldset>
 
-                <div class="newsletter">
-                    <label for="subscribe">
-                        <input type="checkbox" id="subscribe" name="subscribe">
-                        Please subscribe me to the monthly newsletter</label>
+                <div class="form-group">
+                    <label for="message">Musical Goals</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Tell us about your musical experience and goals..."></textarea>
                 </div>
 
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Type your message"></textarea>
-                </div>
-
-                <button type="submit">Get in Touch!</button>
+                <button type="submit" class="button">Send Inquiry</button>
             </form>
-        </div>
-
-        <!-- we are here to serve you -->
-        <div class="adventure">
-            <h2>We Are Here to Serve You</h2>
-            <figure><img src="images/manemployee.jpg" alt="Jack Rivers, Senior River Guide">
-                <figcaption>Jack Rivers, <em>Senior River Guide</em></figcaption>
-            </figure>
-            <figure><img src="images/womanemployee.jpg" alt="Maya Brooks, Rafting Trip Manager" class="centerface">
-                <figcaption>Maya Brooks, <em>Rafting Trip Manager</em></figcaption>
-            </figure>
-            <figure><img src="images/dogemployee.jpg" alt="Sir Paddleton, Float Test Engineer">
-                <figcaption>Sir Paddleton, <em>Float Test Engineer</em></figcaption>
-            </figure>
         </div>
     </main>
 
     <footer>
-        <p>&#169; 2026 The Happy Paddle Raft Co. | Allison Brewer</p>
-        <nav class="socialmedia">
-            <a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="Facebook logo"></a>
-            <a href="https://www.instagram.com/"><img src="images/instagram.svg" alt="Instagram logo"></a>
-            <a href="https://www.youtube.com/"><img src="images/youtube.svg" alt="Youtube logo"></a>
-        </nav>
+        <div id="footer-content">
+            <div class="important-info">
+                <div class="logo flex-gap flex-center">
+                    <img src="images/piano3.JPG" alt="Talented Keys" loading="lazy">
+                    <strong>Talented Keys</strong>
+                </div>
+                <p>Teaching the next generation of pianists in Quezon City since 2016.</p>
+            </div>
+            <nav id="links">
+                <div class="product">
+                    <h3>Studio</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="lessons.html">Programs</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+            <div class="copyright-info flex-center">
+                <small>&copy; <span id="year"></span> Talented Keys</small>
+                <small id="lastModified"></small>
+                <!-- Functional localStorage Tracker (Criteria 15) -->
+                <small id="visitCount"></small>
+            </div>
+        </div>
     </footer>
+
+    <script src="scripts/project.js"></script>
 </body>
 
 </html>
