@@ -1,4 +1,4 @@
-/* --- 1. VARIABLES & RESET (Criteria 3 & 4) --- */
+/* --- 1. VARIABLES & RESET --- */
 :root {
     --light: #F9F7F2;
     --dark: #1A2B3C;
@@ -10,7 +10,6 @@
     --font-secondary: "Lato", sans-serif;
     --fs-heading: 3.5rem;
     --fs-sub: 2.2rem;
-    --transition: 0.3s ease;
 }
 
 * {
@@ -26,53 +25,15 @@ body {
     line-height: 1.8;
 }
 
-/* --- 2. TYPOGRAPHY --- */
-h1 {
-    font-size: var(--fs-heading);
-    font-family: var(--font-primary);
-    margin-bottom: 1.5rem;
-}
-
-h2 {
-    font-size: var(--fs-sub);
-    font-family: var(--font-primary);
-    margin-bottom: 1rem;
-}
-
-p {
-    margin-bottom: 1.2rem;
-}
-
-/* --- 3. LAYOUT UTILITIES (Criteria 4) --- */
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.flex-gap {
-    gap: 2rem;
-}
-
-.section-container {
-    padding: 6rem 10%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-/* --- 4. HEADER & NAVIGATION (Your Request: Solid & Horizontal) --- */
+/* --- 2. HEADER & HORIZONTAL NAV (Your Request) --- */
 header {
     background-color: var(--dark);
     /* Solid Background */
+    padding: 1.5rem 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1rem 5%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
@@ -81,26 +42,30 @@ header nav {
     align-items: center;
 }
 
-#logo {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+/* THE LOGO (Offset Shadow & Bigger - Classmate Style) */
+#logo img {
+    width: 75px;
+    /* Bigger Logo */
+    height: auto;
+    /* This creates the 'layered' look. Ensure your logo is a transparent PNG! */
+    filter: drop-shadow(4px 4px 0px var(--accent));
+    transition: 0.3s ease;
 }
 
-#logo img {
-    width: 45px;
-    height: auto;
+#logo:hover img {
+    filter: drop-shadow(5px 5px 0px var(--white));
+    transform: scale(1.05);
 }
 
 .logo-text {
     color: var(--white);
     font-family: var(--font-primary);
     font-weight: 700;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
 }
 
+/* HORIZONTAL MENU (Your Request) */
 #menu-list {
     list-style: none;
     display: flex;
@@ -114,8 +79,8 @@ header nav {
     color: var(--white);
     text-transform: uppercase;
     font-size: 0.85rem;
-    letter-spacing: 1px;
-    transition: var(--transition);
+    letter-spacing: 1.5px;
+    transition: 0.3s;
 }
 
 #menu-list a:hover,
@@ -123,9 +88,9 @@ header nav {
     color: var(--accent);
 }
 
+/* Mobile Toggle - Hidden on Desktop */
 #menu-toggle {
     display: none;
-    /* Hidden on Desktop */
     background: none;
     border: none;
     cursor: pointer;
@@ -137,7 +102,30 @@ header nav {
     /* Makes black icon white */
 }
 
-/* --- 5. BUTTONS --- */
+/* --- 3. RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark);
+        padding: 2rem;
+        text-align: center;
+    }
+
+    #menu-list.is-active {
+        display: flex;
+    }
+}
+
+/* --- 4. BUTTONS --- */
 .button {
     background: var(--accent);
     color: var(--white);
@@ -147,8 +135,7 @@ header nav {
     font-size: 0.8rem;
     font-weight: 700;
     border: 2px solid var(--accent);
-    transition: var(--transition);
-    cursor: pointer;
+    transition: 0.3s;
     display: inline-block;
 }
 
@@ -159,127 +146,11 @@ header nav {
 
 .button.outline {
     background: transparent;
-    color: var(--dark);
-    border-color: var(--dark);
+    color: var(--white);
+    border-color: var(--white);
 }
 
 .button.outline:hover {
-    background: var(--dark);
-    color: var(--white);
-}
-
-/* --- 6. GRID SYSTEM (Criteria 3 & 4 - RAM Technique) --- */
-.grid-container {
-    display: grid;
-    /* RAM: Repeat, Auto-fit, Minmax (Criteria 6) */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.lesson-card {
-    padding: 2.5rem;
     background: var(--white);
-    border-top: 5px solid var(--grey-light);
-    transition: var(--transition);
-    border-radius: 4px;
-}
-
-.lesson-card:hover,
-.lesson-card.active {
-    border-top-color: var(--accent);
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-.card-icon {
-    font-family: var(--font-primary);
-    font-size: 2.5rem;
-    color: var(--accent);
-    margin-bottom: 1rem;
-}
-
-/* --- 7. FORMS (Criteria 8) --- */
-#enroll-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 600px;
-    margin: 3rem auto;
-    background: var(--white);
-    padding: 3rem;
-    border: 1px solid var(--grey-light);
-}
-
-fieldset {
-    border: 1px solid var(--grey-light);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid var(--grey-medium);
-    font-family: inherit;
-    border-radius: 4px;
-}
-
-/* --- 8. FOOTER --- */
-footer {
-    padding: 5rem 10% 2rem;
-    background: var(--dark);
-    color: var(--white);
-}
-
-#footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 4rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 3rem;
-}
-
-.copyright-info {
-    padding-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    font-size: 0.85rem;
-    color: var(--grey-light);
-}
-
-/* --- 9. RESPONSIVE MEDIA QUERIES (Criteria 6) --- */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    #menu-toggle {
-        display: block;
-    }
-
-    #menu-list {
-        display: none;
-        /* Hidden until toggled by JS */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--dark);
-        padding: 2rem;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    #menu-list.is-active {
-        display: flex;
-    }
-
-    .section-container {
-        padding: 4rem 5%;
-        flex-direction: column;
-    }
+    color: var(--dark);
 }
