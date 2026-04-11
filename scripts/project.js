@@ -2,14 +2,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     // --- 1. Constants & Data ---
     const menuBtn = document.querySelector("#menu-toggle");
-    const menuList = document.querySelector("#menu-list");
+    const menuList = document.querySelector("#menu-list"); ß
     const lessonsGrid = document.querySelector(".grid-container");
     const yearSpan = document.querySelector("#year");
     const modifiedSpan = document.querySelector("#lastModified");
     const visitDisplay = document.querySelector("#visitCount");
     const enrollForm = document.querySelector("#enroll-form");
 
-    // Array of Objects (Requirement: Use objects, arrays)
+    // Array of Objects (Criteria 12 & 13)
     const programs = [
         { id: "01", title: "Early Childhood", desc: "Designed for ages 5-8. We focus on rhythm and joy.", level: "Beginner" },
         { id: "02", title: "Classical Mastery", desc: "Intermediate to advanced training for serious students.", level: "Advanced" },
@@ -18,16 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- 2. Functions ---
 
-    // Function 1: Display Lessons (Requirement: Array methods, Template Literals)
+    // Function 1: Display Lessons (Criteria 9, 13, 14)
     const displayLessons = (data) => {
+        // Only run this if the lessonsGrid exists on the current page
         if (!lessonsGrid) return;
+
         lessonsGrid.innerHTML = "";
 
+        // Use Array Method (Criteria 13)
         data.forEach(item => {
-            // Requirement: Conditional Branching
+            // Conditional Branching (Criteria 11)
             const statusClass = item.level === "Advanced" ? "lesson-card active" : "lesson-card";
 
-            // Requirement: Template Literals
+            // Template Literals (Criteria 14)
             const cardHTML = `
                 <div class="${statusClass}">
                     <div class="card-icon">${item.id}</div>
@@ -35,49 +38,67 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p><em>Level: ${item.level}</em></p>
                     <p>${item.desc}</p>
                 </div>`;
+
             lessonsGrid.insertAdjacentHTML("beforeend", cardHTML);
         });
     };
 
-    // Function 2: LocalStorage Tracker (Requirement: localStorage)
+    // Function 2: LocalStorage Tracker (Criteria 15)
     const trackVisits = () => {
+        if (!visitDisplay) return;
+
         let visits = Number(window.localStorage.getItem("tk-studio-visits")) || 0;
+
         if (visits === 0) {
-            if (visitDisplay) visitDisplay.textContent = "Welcome! This is your first visit. 🎵";
+            visitDisplay.textContent = "Welcome! This is your first visit. 🎵";
         } else {
-            if (visitDisplay) visitDisplay.textContent = `Studio Visits: ${visits}`;
+            visitDisplay.textContent = `Studio Visits: ${visits}`;
         }
+
         visits++;
         window.localStorage.setItem("tk-studio-visits", visits);
     };
 
-    // --- 3. Event Listeners ---
+    // --- 3. Event Listeners (Criteria 10) ---
 
-    // Mobile Menu Toggle (Requirement: Event listening & DOM modification)
-    if (menuBtn) {
+    // Mobile Menu Toggle
+    if (menuBtn && menuList) {
         menuBtn.addEventListener("click", () => {
             menuList.classList.toggle("is-active");
             const isOpen = menuList.classList.contains("is-active");
+
+            // Accessibility & UI feedback
             menuBtn.setAttribute("aria-expanded", isOpen);
+            // Toggle between 'X' and the Menu Image
             menuBtn.innerHTML = isOpen ? "✕" : `<img src="images/menu.svg" alt="Menu">`;
         });
     }
 
-    // Form Submission (Requirement: DOM interaction)
+    // Form Submission (Criteria 8 & 10)
     if (enrollForm) {
         enrollForm.addEventListener("submit", (e) => {
-            e.preventDefault();
+            e.preventDefault(); // Prevents page reload
+
             const formData = new FormData(enrollForm);
             const studentName = formData.get("name");
+
+            // Template Literal for output (Criteria 14)
             alert(`Thank you, ${studentName}! Your inquiry has been sent to Aaron at Talented Keys.`);
+
             enrollForm.reset();
         });
     }
 
-    // Initialize Page
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-    if (modifiedSpan) modifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
+    // --- 4. Initialize Static Elements ---
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 
+    if (modifiedSpan) {
+        modifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
+    }
+
+    // Run core functions
     displayLessons(programs);
     trackVisits();
 });
