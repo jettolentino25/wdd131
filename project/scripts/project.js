@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    const lessonsGrid = document.querySelector(".grid-container");
-    const yearSpan = document.querySelector("#year");
-    const modifiedSpan = document.querySelector("#lastModified");
-    const visitDisplay = document.querySelector("#visitCount");
-
-    const menuToggle = document.querySelector("#menu-toggle");
-    const menuList = document.querySelector("#menu-list");
+    // 1. Select all elements once
+    const elements = {
+        lessonsGrid: document.querySelector(".grid-container"),
+        yearSpan: document.querySelector("#year"),
+        modifiedSpan: document.querySelector("#lastModified"),
+        visitDisplay: document.querySelector("#visitCount"),
+        menuToggle: document.querySelector("#menu-toggle"),
+        menuList: document.querySelector("#menu-list")
+    };
 
     const programs = [
         { id: "01", title: "Early Explorers", ages: "Ages 5 - 6", desc: "Focusing on rhythm games.", level: "Beginner" },
@@ -15,43 +16,38 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "04", title: "Adult & Leisure", ages: "Ages 18+", desc: "Flexible curriculum.", level: "Leisure" }
     ];
 
-    /* NAV TOGGLE */
-    if (menuToggle && menuList) {
-        menuToggle.addEventListener("click", () => {
-            menuList.classList.toggle("show");
+    /* NAV TOGGLE - Unified into one listener */
+    if (elements.menuToggle && elements.menuList) {
+        elements.menuToggle.addEventListener("click", () => {
+            // Pick one class name (e.g., "open") and stick with it in your CSS
+            elements.menuList.classList.toggle("open");
         });
     }
 
     /* PROGRAM CARDS */
-    if (lessonsGrid) {
-        programs.forEach(item => {
+    if (elements.lessonsGrid) {
+        const htmlString = programs.map(item => {
             const statusClass = item.level === "Advanced" ? "lesson-card active" : "lesson-card";
-
-            lessonsGrid.insertAdjacentHTML("beforeend", `
+            return `
                 <div class="${statusClass}">
                     <h3>${item.title}</h3>
                     <p><strong>${item.ages}</strong></p>
                     <p><em>Level: ${item.level}</em></p>
                     <p>${item.desc}</p>
-                </div>
-            `);
-        });
+                </div>`;
+        }).join('');
+
+        elements.lessonsGrid.innerHTML = htmlString;
     }
 
     /* FOOTER INFO */
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-    if (modifiedSpan) modifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
+    if (elements.yearSpan) elements.yearSpan.textContent = new Date().getFullYear();
+    if (elements.modifiedSpan) elements.modifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
 
     /* LOCAL STORAGE */
-    if (visitDisplay) {
-        let visits = Number(localStorage.getItem("tk-visits")) || 0;
-
-        visitDisplay.textContent =
-            visits === 0
-                ? `Welcome! First visit 🎵`
-                : `Visits: ${visits}`;
-
+    if (elements.visitDisplay) {
+        const visits = Number(localStorage.getItem("tk-visits")) || 0;
+        elements.visitDisplay.textContent = visits === 0 ? "Welcome! First visit 🎵" : `Visits: ${visits}`;
         localStorage.setItem("tk-visits", visits + 1);
     }
-
 });
