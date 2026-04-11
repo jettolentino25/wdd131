@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Talented Keys Piano Studio in Quezon City offers premium piano lessons for all ages. Experience holistic music education with Aaron.">
+    <meta name="author" content="Aaron J Evan M. Tolentino">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/project1.css">
-    <link rel="stylesheet" href="styles/project2.css">
+
+    <!-- Using the unified CSS files we discussed -->
+    <link rel="stylesheet" href="styles/project2.css"> <!-- Fonts First -->
+    <link rel="stylesheet" href="styles/project.css"> <!-- Layout Second -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,23 +24,28 @@
 <body>
     <header>
         <nav>
-            <a href="project.html" id="logo" class="flex-center">
+            <a href="index.html" id="logo" class="flex-center">
                 <img src="images/logo.png" alt="Talented Keys Logo">
                 <span class="logo-text">TALENTED KEYS</span>
             </a>
+            <!-- Mobile Menu Toggle (Criteria 10) -->
             <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list" aria-label="Open Menu">
                 <img src="images/menu.svg" alt="Menu">
             </button>
+            <!-- Horizontal Navigation (Your Request) -->
             <ul id="menu-list">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="books.html">Books</a></li>
                 <li><a href="contact.html" class="button btn-nav">Enroll Now</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="hero">
-            <div class="hero-text flex-center flex-column flex-gap">
+        <!-- Hero Section: Above the fold images should NOT be lazy-loaded for better LCP scores -->
+        <section id="hero" class="section-container flex-gap">
+            <div class="hero-text flex-center flex-column">
                 <h1>Where Technical Precision Meets Artistry</h1>
                 <p>Providing world-class piano instruction since 2016. Whether you are a young beginner or an advanced
                     performer, we help you master the keys with passion and purpose.</p>
@@ -46,9 +55,11 @@
                 </div>
             </div>
             <div class="hero-visual-anchor">
-                <img src="images/pianolesson1.jpg" alt="Classical Grand Piano" class="hero-img">
+                <img src="images/pianolesson1.jpg" alt="Classical Grand Piano at Talented Keys Studio" class="hero-img">
             </div>
         </section>
+
+        <!-- About Preview Section (Criteria 7 - Lazy Loading) -->
         <section id="about-preview">
             <div class="section-container flex-gap">
                 <div class="text-block">
@@ -57,43 +68,51 @@
                         accuracy and beauty.</p>
                 </div>
                 <div class="visual-block">
-                    <img src="images/piano4.webp" alt="Music Score Detail" loading="lazy">
+                    <img src="images/piano4.webp" alt="Detailed view of a musical score" loading="lazy">
                 </div>
             </div>
         </section>
-        <section id="lessons">
-            <h2>Our Programs</h2>
+
+        <!-- Dynamic Content Section (Criteria 13 - JS Injection) -->
+        <section id="lessons" class="section-container">
+            <h2 class="flex-center">Our Programs</h2>
             <div class="grid-container">
-                <!-- JavaScript will inject cards here -->
+                <!-- JavaScript (project.js) will inject cards here using the 'programs' array -->
             </div>
         </section>
     </main>
+
     <footer>
         <div id="footer-content">
             <div class="important-info">
                 <div class="logo flex-gap flex-center">
-                    <img src="images/piano2.webp" alt="Talented Keys" loading="lazy">
+                    <!-- Footer images should be optimized and lazy loaded -->
+                    <img src="images/piano2.webp" alt="Talented Keys Logo Inverse" loading="lazy" width="50"
+                        height="50">
                     <strong>Talented Keys</strong>
                 </div>
                 <p>Teaching the next generation of pianists in Quezon City since 2016.</p>
             </div>
-            <nav id="links">
-                <div class="product">
+            <nav id="footer-links">
+                <div class="footer-nav-group">
                     <h3>Studio</h3>
                     <ul>
                         <li><a href="about.html">About Me</a></li>
-                        <li><a href="books.html">References</a></li>
+                        <!-- Link to References as required by rubric (Criteria 5) -->
+                        <li><a href="books.html#references">References</a></li>
                     </ul>
                 </div>
             </nav>
-            <hr>
-            <div class="copyright-info flex-center">
-                <small>&copy; <span id="year"></span>🎹 Aaron J Evan M. Tolentino - Manila, Philippines 🎹</small>
-                <small id="lastModified"></small>
-                <small id="visitCount"></small>
-            </div>
+        </div>
+
+        <div class="copyright-info flex-center">
+            <small>&copy; <span id="year"></span> 🎹 Aaron J Evan M. Tolentino - Manila, Philippines 🎹</small>
+            <small id="lastModified"></small>
+            <!-- LocalStorage Visit Counter (Criteria 15) -->
+            <small id="visitCount"></small>
         </div>
     </footer>
+
     <script src="scripts/project.js"></script>
 </body>
 

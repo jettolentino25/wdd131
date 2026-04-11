@@ -1,16 +1,28 @@
-/* Local or Google Font Fallbacks */
+/* --- Local or Google Font Fallbacks (Criteria 3) --- */
+
+/* Playfair Display - For your elegant headings */
 @font-face {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 700;
-    font-display: swap;
+    font-display: swap; /* Helps your Lighthouse performance score! */
     src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD7K8jtSvaHw360v3Yp367f0.woff2) format('woff2');
 }
 
+/* Lato - For your readable body text */
 @font-face {
     font-family: 'Lato';
-    å font-style: normal;
+    font-style: normal; /* Fixed: Removed the stray 'å' character */
     font-weight: 400;
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHvxk6XweuBCY.woff2) format('woff2');
+}
+
+/* Optional: Add a bold version of Lato for your 'strong' tags */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPHA.woff2) format('woff2');
 }
