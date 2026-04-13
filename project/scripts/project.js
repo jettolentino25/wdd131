@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Select all elements once
+    // Select elements
     const elements = {
         lessonsGrid: document.querySelector(".grid-container"),
         yearSpan: document.querySelector("#year"),
@@ -16,10 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "04", title: "Adult & Leisure", ages: "Ages 18+", desc: "Flexible curriculum.", level: "Leisure" }
     ];
 
-    /* NAV TOGGLE - Unified into one listener */
+    /* NAV TOGGLE - FIXED */
     if (elements.menuToggle && elements.menuList) {
         elements.menuToggle.addEventListener("click", () => {
-            // Pick one class name (e.g., "open") and stick with it in your CSS
             elements.menuList.classList.toggle("open");
         });
     }
