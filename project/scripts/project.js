@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Select elements
     const elements = {
         lessonsGrid: document.querySelector(".grid-container"),
         yearSpan: document.querySelector("#year"),
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "04", title: "Adult & Leisure", ages: "Ages 18+", desc: "Flexible curriculum.", level: "Leisure" }
     ];
 
-    /* NAV TOGGLE - FIXED */
+    /* NAV TOGGLE */
     if (elements.menuToggle && elements.menuList) {
         elements.menuToggle.addEventListener("click", () => {
             elements.menuList.classList.toggle("open");
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* PROGRAM CARDS */
     if (elements.lessonsGrid) {
-        const htmlString = programs.map(item => {
+        elements.lessonsGrid.innerHTML = programs.map(item => {
             const statusClass = item.level === "Advanced" ? "lesson-card active" : "lesson-card";
             return `
                 <div class="${statusClass}">
@@ -35,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>${item.desc}</p>
                 </div>`;
         }).join('');
-
-        elements.lessonsGrid.innerHTML = htmlString;
     }
 
     /* FOOTER INFO */
