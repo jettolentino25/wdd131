@@ -99,8 +99,17 @@ header nav {
     margin-bottom: 1.5rem;
 }
 
+/* ✅ FIXED CENTERING */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero-text p {
     max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .flex-gap {
@@ -158,6 +167,9 @@ header nav {
     border: none;
     color: white;
     cursor: pointer;
+    z-index: 2000;
+    /* ✅ ensures clickable */
+    position: relative;
 }
 
 @media (max-width: 768px) {
@@ -176,7 +188,6 @@ header nav {
         padding: 2rem 0;
     }
 
-    /* This rule makes the menu visible when clicked */
     #menu-list.open {
         display: flex;
     }
