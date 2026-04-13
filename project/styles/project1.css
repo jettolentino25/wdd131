@@ -15,6 +15,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--light);
     color: var(--dark);
@@ -22,7 +26,16 @@ body {
     line-height: 1.8;
 }
 
-/* Header & Nav Fixes */
+/* Reusable Section Styles */
+#hero, #about-preview {
+    padding: 6rem 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header & Nav */
 header {
     background-color: var(--dark);
     padding: 1.5rem 5%;
@@ -78,25 +91,16 @@ header nav {
     color: var(--accent);
 }
 
-/* Centering Logic */
-#hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 6rem 5%;
-}
-
+/* Typography & Content */
 .hero-text h1 {
     font-family: var(--font-primary);
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: var(--dark);
 }
 
 .hero-text p {
     max-width: 750px;
-    margin: 0 auto;
+    /* Removed margin: 0 auto because flex-align handles it */
 }
 
 .flex-gap {
@@ -106,7 +110,7 @@ header nav {
     margin-top: 2rem;
 }
 
-.hero-img {
+.hero-img, .visual-block img {
     max-width: 100%;
     height: auto;
     margin-top: 3rem;
@@ -115,26 +119,12 @@ header nav {
 
 #about-preview {
     background-color: var(--grey-light);
-    padding: 6rem 5%;
-    text-align: center;
-}
-
-#about-preview .section-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .text-block h2 {
     font-family: var(--font-primary);
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--dark);
-}
-
-.visual-block img {
-    max-width: 100%;
-    margin-top: 2rem;
 }
 
 /* Buttons */
@@ -145,6 +135,7 @@ header nav {
     border: 2px solid var(--accent);
     transition: 0.3s;
     font-weight: 700;
+    display: inline-block; /* Ensures padding works correctly */
 }
 
 .button:hover {
@@ -158,10 +149,6 @@ header nav {
     border-color: var(--dark);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* MOBILE NAV */
 #menu-toggle {
     display: none;
@@ -169,10 +156,10 @@ html {
     background: none;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-
     #menu-toggle {
         display: block;
     }
@@ -184,15 +171,12 @@ html {
         width: 100%;
         background: var(--dark);
         flex-direction: column;
-        display: none;
+        display: none; /* Hidden by default */
         padding: 2rem 0;
     }
 
-    #menu-list.show {
+    /* Use .open to match the refactored JS */
+    #menu-list.open {
         display: flex;
     }
-}
-
-html {
-    scroll-behavior: smooth;
 }
