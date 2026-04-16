@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* PROGRAM CARDS */
     if (elements.lessonsGrid) {
         elements.lessonsGrid.innerHTML = programs.map(item => {
-            const statusClass = item.level === "Advanced" ? "lesson-card active" : "lesson-card";
+            const statusClass = item.level === "Advanced" ? "lesson-card" : "lesson-card";
             return `
                 <div class="${statusClass}">
                     <h3>${item.title}</h3>
